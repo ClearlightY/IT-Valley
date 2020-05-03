@@ -6,10 +6,6 @@ import top.clearlight.enums.UpdateUserEnum;
 
 /**
  * 存储操作用户的结果
- * @author sen
- * 2018年5月6日
- * 下午9:34:13
- * TODO
  */
 public class UserExecution {
 

@@ -2,10 +2,6 @@ package top.clearlight.dto;
 
 /**
  * 封装JSON对象，所有的返回结果都使用它
- * @author sen
- * 2018年5月16日
- * 下午7:14:57
- * @param <T>
  * TODO
  */
 public class Result<T> {

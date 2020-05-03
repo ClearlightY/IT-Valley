@@ -5,10 +5,6 @@ import com.google.gson.Gson;
 
 /**
  * json工具类
- * @author sen
- * 2018年7月12日
- * 下午9:48:33
- * TODO
  */
 public class JsonUtil {
 
