@@ -58,7 +58,7 @@ public class UserController extends BaseController{
 	 */
 	@RequestMapping(value = "/user/{name}", method = RequestMethod.GET)
 	private String detail(@PathVariable String name, Model model,@RequestParam(value = "tp", defaultValue = "1") Integer tp,@RequestParam(value = "rp", defaultValue = "1") Integer rp,HttpServletRequest request) {
-		if(name == null) {
+			if(name == null) {
 			return "error-page/404";
 		}
 		User user = null;
@@ -258,9 +258,9 @@ public class UserController extends BaseController{
 			return new Result<>(false,"密码不能为空");
 		}
 		User user = getUser(request);
-		if(!user.getPassword().equals(new BCryptPasswordEncoder().encode(oldPassword))) {
+		/*if(!user.getPassword().equals(new BCryptPasswordEncoder().encode(oldPassword))) {
 			return new Result<>(false,"旧密码不正确");
-		}
+		}*/
 		//加密保存
 		user.setPassword(new BCryptPasswordEncoder().encode(newPassword));
 		UserExecution updateUser = rootUserService.updateUser(user);

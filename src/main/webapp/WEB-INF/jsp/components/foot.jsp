@@ -32,7 +32,11 @@
 		<p style="color: #778087;"><a data-v-2b9fe4cd="">©2020 IT Valley</a></p>
 		<p style="color: #ccc;"><font color="red">♥</font> 「Stay Hungry, Stay Foolish.」<font color="red">♥</font></p>
 		<p><a href="http://beian.miit.gov.cn/publish/query/indexFirst.action" target="_blank" rel="nofollow noopener">冀ICP备19019307号</a></p>
-
+		<link rel="stylesheet" href="/resources/css/APlayer.min.css">
+		<div id="aplayer"></div>
+		<script type="text/javascript" src="/resources/js/APlayer.min.js"></script>
+		<script type="text/javascript" src="/resources/js/music.js"></script>
 	</div>
+
 </body>
 </html>

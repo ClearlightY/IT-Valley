@@ -32,10 +32,10 @@
       </div>
       <div class="panel-body">
         <form id="form">
-          <div class="form-group">
+          <!-- <div class="form-group">
             <label for="oldPassword">旧密码</label>
             <input type="password" class="form-control" id="oldPassword" name="oldPassword">
-          </div>
+          </div> -->
           <div class="form-group">
             <label for="newPassword">新密码</label>
             <input type="password" class="form-control" id="newPassword" name="newPassword">
