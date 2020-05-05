@@ -5,13 +5,6 @@ import top.clearlight.dto.PageDataBody;
 import top.clearlight.entity.User;
 import top.clearlight.entity.Visit;
 
-/**
- * 
- * @author sen
- * 2018年8月4日
- * 下午3:11:54
- * TODO
- */
 public interface VisitService {
 
 	/**

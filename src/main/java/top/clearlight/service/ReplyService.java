@@ -9,10 +9,6 @@ import top.clearlight.entity.Reply;
 
 /**
  * 评论接口
- * @author sen
- * 2018年5月25日
- * 下午8:25:39
- * TODO
  */
 public interface ReplyService {
 

@@ -5,10 +5,6 @@ import java.util.Date;
 /**
  * 话题实体
  * Table: root_topic
- * @author sen
- * 2018年5月5日
- * 下午9:19:57
- * TODO
  */
 public class Topic {
 

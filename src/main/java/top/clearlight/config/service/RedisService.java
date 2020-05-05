@@ -68,8 +68,9 @@ public class RedisService implements BaseService<JedisPool> {
 	@Override
 	public JedisPool instance() {
 		try {
-			if (jedisPool != null)
+			if (jedisPool != null) {
 				return jedisPool;
+			}
 
 			if (!redisConfig()) {
 				log.info("redis配置信息不全或没有配置...");

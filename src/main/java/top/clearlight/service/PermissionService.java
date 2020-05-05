@@ -7,11 +7,7 @@ import java.util.Map;
 
 import top.clearlight.entity.Permission;
 
-/**
- * <p></p>
- * @author: miansen.wang
- * @date: 2019-03-01
- */
+
 public interface PermissionService {
 
 	Permission getById(Integer id);

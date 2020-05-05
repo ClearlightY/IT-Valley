@@ -5,11 +5,6 @@ import java.util.List;
 
 /**
  * 分页实体
- * @author sen
- * 2018年5月6日
- * 下午9:08:03
- * @param <T>
- * TODO
  */
 public class PageDataBody<T> implements Serializable{
 

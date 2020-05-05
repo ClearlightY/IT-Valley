@@ -3,13 +3,7 @@ package top.clearlight.service;
 import top.clearlight.dto.DMLExecution;
 import top.clearlight.entity.UpDown;
 
-/**
- * 
- * @author sen
- * 2018年8月11日
- * 上午11:45:13
- * TODO
- */
+
 public interface UpDownService {
 
 	/**

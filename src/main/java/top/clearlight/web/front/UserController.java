@@ -67,7 +67,7 @@ public class UserController extends BaseController{
 			return "error-page/404";
 		}
 		User user2 = getUser(request);//当前用户
-		System.out.println("user2::" + user2);
+		// System.out.println("user2::" + user2);
 		PageDataBody<Topic> topicPage = rootTopicService.pageByAuthor(tp, 20, name);
 		PageDataBody<ReplyAndTopicByName> replyPage = rootReplyService.findAllByNameAndTopic(name, rp, 20);
 		int countTopic = rootTopicService.countByUserName(user.getUserName());//主题数量
@@ -84,6 +84,8 @@ public class UserController extends BaseController{
 			visit.setDelete(false);
 			visitService.save(visit);
 		}
+		model.addAttribute("user", user);
+		model.addAttribute("user2", user2);
 		model.addAttribute("replyPage", replyPage);
 		model.addAttribute("topicPage", topicPage);
 		model.addAttribute("countTopic", countTopic);

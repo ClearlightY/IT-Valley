@@ -5,10 +5,7 @@ import java.util.List;
 import top.clearlight.dto.PageDataBody;
 import top.clearlight.entity.Role;
 
-/**
- * @author miansen.wang
- * @date 2019年2月27日 下午3:40:52
- */
+
 public interface RoleService {
 	
 	// 根据ID查询角色

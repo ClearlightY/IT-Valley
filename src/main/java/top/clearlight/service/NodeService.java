@@ -5,10 +5,7 @@ import java.util.List;
 import top.clearlight.dto.PageDataBody;
 import top.clearlight.entity.Node;
 
-/**
- * @author miansen.wang
- * @date 2018年11月3日 下午2:46:55
- */
+
 public interface NodeService {
 
 	/**

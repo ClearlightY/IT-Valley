@@ -4,10 +4,7 @@ import java.util.Map;
 import top.clearlight.dto.PageDataBody;
 import top.clearlight.entity.AdminUser;
 
-/**
- * @author miansen.wang
- * @date 2019年2月26日 下午22:21:57
- */
+
 public interface AdminUserService {
 
 	// 根据用户名获取后台用户

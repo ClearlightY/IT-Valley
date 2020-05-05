@@ -5,11 +5,7 @@ import java.util.Collection;
 import java.util.List;
 import top.clearlight.entity.AdminUserRoleRel;
 
-/**
- * <p></p>
- * @author: miansen.wang
- * @date: 2019-02-28
- */
+
 public interface AdminUserRoleRelService {
 
 	/**

@@ -6,11 +6,7 @@ import java.util.List;
 import java.util.Map;
 import top.clearlight.entity.SystemConfig;
 
-/**
- * <p></p>
- * @author: miansen.wang
- * @date: 2019-03-07
- */
+
 public interface SystemConfigService {
 
 	SystemConfig getById(Integer id);

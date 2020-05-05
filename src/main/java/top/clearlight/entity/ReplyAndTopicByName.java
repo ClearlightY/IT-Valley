@@ -4,10 +4,6 @@ import java.util.Date;
 
 /**
  * 根据评论人昵称关联话题表查询全部评论
- * @author sen
- * 2018年6月3日
- * 下午5:55:06
- * TODO
  */
 public class ReplyAndTopicByName {
 

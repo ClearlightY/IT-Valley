@@ -13,7 +13,7 @@ const ap = new APlayer({
     {
       name: 'Air',
       artist: '纯音乐',
-      url: 'https://m7.music.126.net/20200504034747/0232e4cb59ba6a760e0166e8f10be9ad/ymusic/d7c9/4712/e5f2/4b216c4651baecb58df878211f961d91.mp3',
+      url: 'http://clearlight.top/homepage/music/leisure.mp3',
       cover: 'https://p3.music.126.net/_BqzzgcXVksCJkL4-sIxcw==/2892815093153065.jpg?param=300y300',
     },
     {

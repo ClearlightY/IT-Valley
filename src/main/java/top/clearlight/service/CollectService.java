@@ -4,12 +4,7 @@ import top.clearlight.dto.PageDataBody;
 import top.clearlight.entity.Collect;
 import top.clearlight.entity.Topic;
 
-/**
- * @author sen
- * 2018年7月3日
- * 上午10:14:57
- * TODO
- */
+
 public interface CollectService {
 
 	/**

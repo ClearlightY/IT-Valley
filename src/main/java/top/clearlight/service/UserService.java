@@ -9,10 +9,6 @@ import top.clearlight.entity.Top100;
 
 /**
  * RootUserService
- * @author sen
- * 2018年5月6日
- * 下午9:10:40
- * TODO
  */
 public interface UserService {
 
