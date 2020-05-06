@@ -1,10 +1,6 @@
 package top.clearlight.util;
 
-/**
- * <p></p>
- * @author: miansen.wang
- * @date: 2019-03-14
- */
+
 public class RedisConstants {
 
 	private RedisConstants() {}

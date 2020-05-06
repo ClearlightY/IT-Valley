@@ -9,7 +9,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Roothub后台管理系统</title>
+    <title>IT Valley后台管理系统</title>
     <link rel="icon" href="/resources/images/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
@@ -24,6 +24,10 @@
           position: relative;
           padding: 65px 15px 0 15px;
         }
+      }
+      body {
+        height: 100%;
+        width: 100%;
       }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
@@ -47,13 +51,13 @@
       }
     </script>
   </head>
-<body class="hold-transition login-page">
+<body class="hold-transition login-page" style="background-image: url(https://s1.ax1x.com/2020/03/16/8JiCcR.jpg);background-repeat: repeat-x;background-attachment: fixed;background-size: cover;">
   <div class="login-box">
     <div class="login-logo">
-      <a href="javascript:;"><b>Roothub</b>管理平台</a>
+      <a href="javascript:;"><b>IT Valley</b>管理平台</a>
     </div>
     <div class="login-box-body">
-      <p class="login-box-msg">Roothub 管理平台登录</p>
+      <p class="login-box-msg">IT Valley 管理平台登录</p>
       <c:if test="${error != null}">
         <div class="text-red">${error}</div>
       </c:if>

@@ -23,10 +23,7 @@ import top.clearlight.service.TopicService;
 import top.clearlight.service.UserService;
 import com.sun.management.OperatingSystemMXBean;
 
-/**
- * @author miansen.wang
- * @date 2019年2月25日 下午8:51:25
- */
+
 @Controller
 @RequestMapping("/admin")
 public class IndexAdminController {

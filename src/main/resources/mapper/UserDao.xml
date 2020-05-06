@@ -89,9 +89,9 @@
 		SELECT
 		<include refid="Base_Column_List"/>
 		FROM
-			user
+		user
 		WHERE
-			user_name = #{userName}
+		user_name = #{userName}
 	</select>
 	<!-- 通过邮箱查询单个用户 -->
 	<select id="selectByEmail" resultType="User" parameterType="java.lang.String">

@@ -23,7 +23,7 @@
 					<div class="inner">
 						<h3>${topic_count}</h3>
 
-						<p>今天新增话题数</p>
+						<p>今天新增文章数</p>
 					</div>
 					<div class="icon">
 						<i class="ion ion-ios-list-outline"></i>
@@ -33,7 +33,7 @@
 				</div>
 			</div>
 			<!-- ./col -->
-			<div class="col-lg-3 col-xs-6">
+<%--			<div class="col-lg-3 col-xs-6">
 				<!-- small box -->
 				<div class="small-box bg-green">
 					<div class="inner">
@@ -47,7 +47,7 @@
 					<a href="/admin/node/list" class="small-box-footer">更多 <i
 						class="fa fa-arrow-circle-right"></i></a>
 				</div>
-			</div>
+			</div>--%>
 			<!-- ./col -->
 			<div class="col-lg-3 col-xs-6">
 				<!-- small box -->

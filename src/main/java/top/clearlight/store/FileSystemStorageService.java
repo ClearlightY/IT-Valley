@@ -18,13 +18,6 @@ import top.clearlight.exception.StorageException;
 import top.clearlight.util.Base64Util;
 import top.clearlight.util.FileNameUtil;
 
-/**
- * <p>
- * </p>
- * 
- * @author: miansen.wang
- * @date: 2019-03-20
- */
 @Service
 public class FileSystemStorageService implements StorageService {
 

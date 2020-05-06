@@ -54,7 +54,7 @@ public class TopicServiceImpl implements TopicService{
 	}
 
 	/**
-	 * 根据板块查询所有话题
+	 * 根据板块查询所有文章
 	 */
 	@Override
 	public PageDataBody<Topic> pageAllByTab(Integer pageNumber, Integer pageSize,String tab) {

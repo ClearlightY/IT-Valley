@@ -7,11 +7,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import org.springframework.web.multipart.MultipartFile;
 
-/**
- * <p></p>
- * @author: miansen.wang
- * @date: 2019-04-24
- */
+
 public class BASE64DecodedMultipartFile implements MultipartFile {
 
 	/**

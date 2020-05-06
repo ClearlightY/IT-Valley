@@ -4,8 +4,6 @@ import java.util.UUID;
 
 /**
  * <p>生成新的文件名</p>
- * @author: miansen.wang
- * @date: 2019-03-20
  */
 public class FileNameUtil {
 

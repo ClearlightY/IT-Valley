@@ -14,9 +14,6 @@ import top.clearlight.service.SystemConfigService;
  * <p>
  * 存储配置
  * </p>
- * 
- * @author: miansen.wang
- * @date: 2019-03-19
  */
 @Component
 @Scope("prototype")

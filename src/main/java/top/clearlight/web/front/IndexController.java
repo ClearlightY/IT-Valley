@@ -123,6 +123,7 @@ public class IndexController extends BaseController {
 
 	/**
 	 * 注册接口
+	 * 
 	 * @param username
 	 * @param password
 	 * @param email
@@ -137,10 +138,13 @@ public class IndexController extends BaseController {
 		ApiAssert.notEmpty(username, "请输入用户名");
 		ApiAssert.notEmpty(password, "请输入密码");
 		ApiAssert.notEmpty(email, "请输入邮箱");
+		// 调用业务逻辑层查找用户是否存在
 		User user = userService.findByName(username);
 		ApiAssert.isNull(user, "用户已存在");
+		// 调用业务逻辑层查找邮箱是否存在
 		user = userService.findByEmail(email);
 		ApiAssert.isNull(user, "邮箱已存在");
+		// 满足所有条件后则创建新的用户
 		UserExecution save = userService.createUser(username, password, email);
 		return new Result<UserExecution>(true, save);
 	}
@@ -166,15 +170,22 @@ public class IndexController extends BaseController {
 	@ResponseBody
 	private Result<User> login(@RequestParam("username") String username, @RequestParam("password") String password,
 			HttpServletRequest request, HttpServletResponse response) {
+        // 调用业务逻辑层后再调用dao层查询数据库中是否含有该用户名
 		User user = userService.findByName(username);
+		// 判断用户是否存在， 处理异常
 		ApiAssert.notNull(user, "用户不存在");
-		ApiAssert.isTrue(new BCryptPasswordEncoder().matches(password, user.getPassword()), "密码不正确");
+		// 判断密码和数据库中的密码是否一致
+		ApiAssert.isTrue(new BCryptPasswordEncoder().
+			matches(password, user.getPassword()), "密码不正确");
 		// 设置cookie
 		CookieAndSessionUtil.setCookie(siteConfig.getCookieConfig().getName(),
-				Base64Util.encode(user.getThirdAccessToken()), siteConfig.getCookieConfig().getMaxAge(),
-				siteConfig.getCookieConfig().getPath(), siteConfig.getCookieConfig().isHttpOnly(), response);
+				Base64Util.encode(user.getThirdAccessToken()), 
+				siteConfig.getCookieConfig().getMaxAge(),
+				siteConfig.getCookieConfig().getPath(), 
+				siteConfig.getCookieConfig().isHttpOnly(), response);
 		// 设置session
 		CookieAndSessionUtil.setSession(request, "user", user);
+		// 将用户对象封装了到Result中
 		return new Result<User>(true, user);
 	}
 
@@ -316,7 +327,7 @@ public class IndexController extends BaseController {
 
 	@RequestMapping(value = "/feedback/add", method = RequestMethod.POST, produces = "application/json; charset=utf-8")
 	@ResponseBody
-	private Map<String,Object> feedbackAdd(String info) {
+	private Map<String, Object> feedbackAdd(String info) {
 		Map<String, Object> redisMap = new HashedMap();
 		Map<String, Object> returnMap = new HashedMap();
 		List<String> list = new ArrayList<>();
@@ -336,8 +347,7 @@ public class IndexController extends BaseController {
 	}
 
 	/**
-	 * 这是测试代码，与项目无关
-	 * excel
+	 * 这是测试代码，与项目无关 excel
 	 * 
 	 * @return
 	 */
@@ -354,6 +364,7 @@ public class IndexController extends BaseController {
 
 	/**
 	 * 这是测试代码，与项目无关
+	 * 
 	 * @param response
 	 * @throws Exception
 	 */

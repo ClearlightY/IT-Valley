@@ -43,7 +43,7 @@
              </c:forEach>
            </select>
          </div> --%>
-         <c:if test="${fn:length(node) == 0}">
+ <%--        <c:if test="${fn:length(node) == 0}">
          	<div class="form-group">
           <label for="node">节点</label>
           <select id="node" class="form-control" name="node">
@@ -52,7 +52,7 @@
              </c:forEach>
           </select>
         </div>
-        </c:if>
+        </c:if>--%>
         <div class="form-group">
           <div class="form-group">
             <label for="title">标签</label>
@@ -73,7 +73,6 @@
       <p>• 在标题中描述内容要点。如果一件事情在标题的长度内就已经可以说清楚，那就没有必要写正文了。</p>
       <p>• 保持对陌生人的友善。用知识去帮助别人。</p>
       <p>• 如果是转载的文章，请务必只填上原文的URL，内容就不用复制过来了。</p>
-      <p>• 请为你的主题选择一个节点。恰当的归类会让你发布的信息更加有用。</p>
     </div>
   </div>
 </div>
@@ -86,28 +85,28 @@
 <script src="/resources/wangEditor/wangEditor.min.js"></script>
 <!-- <script src="/resources/js/topic/node.js"></script> -->
 <script type="text/javascript">
-  $(function () {
-    var E = window.wangEditor;
-    var editor = new E('#editor');
-    editor.customConfig.uploadFileName = 'file';
-    editor.customConfig.uploadImgServer = '/common/upload';
-    editor.customConfig.menus = [
-    	  'head',  // 标题
-    	  'bold',  // 粗体
-    	  'italic',  // 斜体
-    	  'underline',  // 下划线
-    	  'strikeThrough',  // 删除线
-    	  'link',  // 插入链接
-    	  'list',  // 列表
-    	  'quote',  // 引用
-    	  'emoticon',  // 表情
-    	  'image',  // 插入图片
-    	  'table',  // 表格
-    	  'code',  // 插入代码
-    	  'undo',  // 撤销
-    	  'redo'  // 重复
-        ];
-        editor.create();
+            $(function () {
+              var E = window.wangEditor;
+              var editor = new E('#editor');
+              editor.customConfig.uploadFileName = 'file';
+              editor.customConfig.uploadImgServer = '/common/upload';
+              editor.customConfig.menus = [
+                'head',  // 标题
+                'bold',  // 粗体
+                'italic',  // 斜体
+                'underline',  // 下划线
+                'strikeThrough',  // 删除线
+                'link',  // 插入链接
+                'list',  // 列表
+                'quote',  // 引用
+                'emoticon',  // 表情
+                'image',  // 插入图片
+                'table',  // 表格
+                'code',  // 插入代码
+                'undo',  // 撤销
+                'redo'  // 重复
+              ];
+              editor.create();
 
         function commentThis(username, commentId) {
           $("#replyAuthor").text(username);
@@ -143,10 +142,12 @@
           if(!title || title.length > 120) {
             alert('请输入标题，且最大长度在120个字符以内');
             return false;
-          }else if(!nodeTitle){
+          }
+         /* else if(!nodeTitle){
           alert('请选择一个节点');
           return false;
-        }else {
+        }*/
+          else {
         $.ajax({
           url: '/topic/save',
           type: 'post',
@@ -158,7 +159,7 @@
             content: contentHtml,
             //tab:tab,
             // nodeCode:nodeCode,
-            nodeTitle: nodeTitle,
+            // nodeTitle: nodeTitle,
             tag: tag
           },
           success: function(data){

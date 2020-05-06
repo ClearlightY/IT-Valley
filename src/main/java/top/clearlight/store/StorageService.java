@@ -6,11 +6,7 @@ import java.util.stream.Stream;
 import org.springframework.core.io.Resource;
 import org.springframework.web.multipart.MultipartFile;
 
-/**
- * <p></p>
- * @author: miansen.wang
- * @date: 2019-03-20
- */
+
 public interface StorageService {
 
 	/**

@@ -62,10 +62,6 @@
 		FROM
 			topic
 		WHERE is_delete = '0'
-		<!-- <if test="tab != null">
-		AND tab = #{tab}
-		</if> -->
-		<!-- order by top desc,create_date desc,last_reply_time desc -->
 		<if test="tab != null">
 			<if test='tab == "all"'>
 				order by top desc,create_date desc

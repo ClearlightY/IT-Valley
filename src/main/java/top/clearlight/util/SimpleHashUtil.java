@@ -3,11 +3,7 @@ package top.clearlight.util;
 import org.apache.shiro.crypto.hash.SimpleHash;
 import org.apache.shiro.util.ByteSource;
 
-/**
- * <p></p>
- * @author: miansen.wang
- * @date: 2019-03-03
- */
+
 public class SimpleHashUtil {
 
 	/**
