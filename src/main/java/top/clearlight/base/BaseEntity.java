@@ -3,6 +3,7 @@ package top.clearlight.base;
 import java.io.UnsupportedEncodingException;
 import java.util.Date;
 
+import org.junit.Test;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
@@ -54,4 +55,5 @@ public class BaseEntity {
 			return "刚刚";
 		}
 	}
+	
 }
