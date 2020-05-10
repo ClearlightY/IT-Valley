@@ -1,6 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
+
 <head>
   <title>首页-登录</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
   <link href="/resources/css/app.css" rel="stylesheet" type="text/css">
   <link rel="shortcut icon" href="/resources/images/favicon.ico">
 </head>
+
 <body>
   <div class="wrapper">
     <jsp:include page="components/head.jsp"></jsp:include>
@@ -19,13 +21,14 @@
             <a href="/">主页</a> / 登录
           </div>
           <c:if test="${message != null}">
-          <div class="message">${message}</div>
+            <div class="message">${message}</div>
           </c:if>
           <div class="panel-body">
-            <form role="form" id="form">
+            <form role="form" id="form" name="loginForm">
               <div class="form-group">
                 <label for="username">用户名</label>
-                <input type="text" class="form-control" id="username" name="username" placeholder="用户名" value="${cookie.username.value}">
+                <input type="text" class="form-control" id="username" name="username" placeholder="用户名"
+                  value="${cookie.username.value}">
               </div>
               <div class="form-group">
                 <label for="password">密码</label>
@@ -34,23 +37,34 @@
               <button type="button" id="btn" class="btn btn-primary">登录</button>
             </form>
             <script type="text/javascript">
-              function wp_attempt_focus(){
-                setTimeout( function(){ try{
-                  d = document.getElementById('username');
-                  d.focus();
-                  d.select();
-                } catch(e){}
+              function wp_attempt_focus() {
+                setTimeout(function () {
+                  try {
+                    d = document.getElementById('username');
+                    d.focus();
+                    d.select();
+                  } catch (e) {}
                 }, 200);
               }
               wp_attempt_focus();
+
+              /* 捕捉Enter事件 */
+              function keyProcess(e) {
+                var e = e || event;
+                var currentKey = e.keyCode || e.which || e.charCode;
+                if (currentKey == 13) {
+                  $("#btn").click();
+                }
+              }
+              document.onkeydown = keyProcess;
             </script>
           </div>
         </div>
       </div>
     </div>
   </div>
- </div>
-</div>
+  </div>
+  </div>
   <jsp:include page="components/foot.jsp"></jsp:include>
   <!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
   <script src="/resources/js/jquery.js"></script>
@@ -58,4 +72,5 @@
   <script src="/resources/js/bootstrap.min.js"></script>
   <script src="/resources/js/login.js"></script>
 </body>
+
 </html>

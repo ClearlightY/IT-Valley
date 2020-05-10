@@ -24,26 +24,13 @@
                 <div class="panel panel-default">
                     <div class="tab panel-heading">
                         <ul class="nav nav-pills" id="tab">
-                            <%-- <c:forEach var="item" items="${tabList}" varStatus="status">
-                            <li class="${item.tabName}"><a href="/?tab=${item.tabName}" class="tab">${item.tabDesc}</a></li>
-                        </c:forEach> --%>
                             <li class="all"><a href="/?tab=all">全部</a></li>
                             <li class="hot"><a href="/?tab=hot">最热</a></li>
                             <li class="new"><a href="/?tab=new">最新</a></li>
-                            <%--        	<li class="lonely"><a href="/?tab=lonely">无人问津</a></li>--%>
-                            <li class="member"><a href="/?tab=member" class="tab">关注</a></li>
+                            <!-- <li class="lonely"><a href="/?tab=lonely">无人问津</a></li> -->
+                            <li class="member"><a href="/?tab=member">关注</a></li>
                         </ul>
                     </div>
-                    <!-- 节点列表 -->
-                    <%-- <c:if test="${fn:length(nodeList) > 0}">
-              <div class="section node">
-                <ul class="nav nav-pills" id="node">
-                  <c:forEach var="item" items="${nodeList}" varStatus="status">
-                  <li class="active"><a href="${item.url}">${item.nodeTitle}</a></li>
-                </c:forEach>
-              </ul>
-            </div>
-            </c:if> --%>
                     <div class="panel-body paginate-bot">
                         <c:forEach var="item" items="${page.list}">
                             <div class="media">
@@ -265,6 +252,11 @@
         //console.log(count);
         //console.log(url);
         paginate(count, limit, p, url);
+
+
+        // $("#newly").on('click', function (){
+        //     alert("hello");
+        // })
     </script>
 </body>
 
