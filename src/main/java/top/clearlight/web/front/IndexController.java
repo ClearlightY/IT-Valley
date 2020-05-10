@@ -245,7 +245,7 @@ public class IndexController extends BaseController {
 	private String search(HttpServletRequest request, @RequestParam("s") String search,
 			@RequestParam(value = "p", defaultValue = "1") Integer p) {
 		if (search == null || search.equals("")) {
-			return "search";
+			return "index";
 		}
 		PageDataBody<Topic> pageLike = topicService.pageLike(p, 50, search);
 		// BaseEntity baseEntity = new BaseEntity();

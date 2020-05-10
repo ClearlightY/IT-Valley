@@ -59,7 +59,7 @@
 					<li id="biaoqian"><a href="/tags">标签</a></li>
 					<li id="loginli" style="display:none"><a href="/login">登录</a></li>
 					<li id="zhuceli" style="display:none"><a href="/register">注册</a></li>
-					<li class="hidden-md hidden-lg"><a href="/topic/create">发布话题</a></li>
+					<li class="hidden-md hidden-lg"><a href="/topic/create">发布文章</a></li>
 					<li id="loginuser" style="display:none"><a href="/user/public"><span class="badge"
 								id="badge"></span></a></li>
 					<li id="shezhili" style="display:none"><a href="/user/settings/profile">设置</a></li>

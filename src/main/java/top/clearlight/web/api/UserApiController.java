@@ -54,7 +54,7 @@ public class UserApiController extends BaseController {
 	@Autowired
 	private VisitService visitService;
 	@Autowired
-	private SiteConfig citeConfig;
+	private SiteConfig siteConfig;
 	
 	/**
 	 * 用户的收藏
@@ -196,7 +196,7 @@ public class UserApiController extends BaseController {
 		User user = getUser(request);
 		HashMap<String,Object> map = new HashMap<>();
 		if(user == null) {
-			map.put("intro", citeConfig.getIntro());
+			map.put("intro", siteConfig.getIntro());
 			return new Result<>(false, map);
 		}else {
 			map.put("userName", user.getUserName());

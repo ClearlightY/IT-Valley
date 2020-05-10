@@ -51,6 +51,7 @@
             </if>
         </if>
      </select>
+
      <!-- 关注的人的主题 -->
 	<select id="selectTopic" resultType="Topic">
 		SELECT

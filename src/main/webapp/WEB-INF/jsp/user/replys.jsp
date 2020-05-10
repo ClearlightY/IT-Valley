@@ -3,7 +3,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-  <title>${user.userName}评论的话题</title>
+  <title>${user.userName}评论的文章</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- 引入 Bootstrap -->
   <link href="/resources/css/bootstrap.min.css" rel="stylesheet">
@@ -16,7 +16,7 @@
     <div class="row">
       <div class="col-md-9">
         <div class="panel panel-default">
-          <div class="panel-heading">${user.userName}评论的话题</div>
+          <div class="panel-heading">${user.userName}评论的文章</div>
           <table class="table table-striped">
             <tbody>
             <c:forEach var="item" items="${replyPage.list}">
@@ -27,7 +27,7 @@
                   value="${item.createDate}" />
                 评论了
                 <a href="/user/${item.author}">${item.author}</a>
-                创建的话题 › <a href="/topic/${item.topicId}">${item.title}</a>
+                发表的文章 › <a href="/topic/${item.topicId}">${item.title}</a>
               </td>
             </tr>
             <tr class="user_comments">

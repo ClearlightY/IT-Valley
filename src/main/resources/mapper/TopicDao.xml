@@ -129,10 +129,13 @@
 		FROM
 			topic
 		where title like '%${like}%'
+		/*先按照置顶倒序排列，并且按照发布日期倒序排列*/
 		order by top desc, last_reply_time desc
 		<if test="start != null">
+		    /*开始查询的位置： 例如10， 则从11开始显示*/
             limit #{start,jdbcType=INTEGER}
             <if test="limit != null">
+                /*查询的数量*/
                 ,#{limit,jdbcType=INTEGER}
             </if>
         </if>

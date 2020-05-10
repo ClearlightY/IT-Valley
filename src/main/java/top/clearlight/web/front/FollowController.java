@@ -136,10 +136,12 @@ public class FollowController extends BaseController{
 		if(user == null) {
 			return "error-page/404.jsp";
 		}
+
 		int countCollect = collectDaoService.count(user.getUserId());//用户收藏话题的数量
 		int countTopicByUserName = rootTopicService.countByUserName(user.getUserName());//用户发布的主题的数量
 		int notReadNotice = rootNoticeService.countNotReadNotice(user.getUserName());//未读通知的数量
 		PageDataBody<Topic> pageTopic = followService.pageTopic(p, 20, user.getUserId());
+		System.out.println(pageTopic);
 		BaseEntity baseEntity = new BaseEntity();
 		request.setAttribute("baseEntity", baseEntity);
 		request.setAttribute("countCollect", countCollect);

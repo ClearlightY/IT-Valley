@@ -5,6 +5,8 @@ import top.clearlight.entity.Follow;
 import top.clearlight.entity.Topic;
 import top.clearlight.entity.User;
 
+import java.util.List;
+
 public interface FollowService {
 
 	/**
@@ -15,6 +17,11 @@ public interface FollowService {
 	 * @return
 	 */
 	PageDataBody<User> page(Integer pageNumber, Integer pageSize, Integer uid);
+
+	/**
+	 * 关注的人的id
+	 */
+	// List<Integer> followUserID(Integer uid);
 	
 	/**
 	 * 关注人的主题

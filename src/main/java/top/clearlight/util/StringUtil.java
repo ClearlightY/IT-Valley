@@ -56,20 +56,26 @@ public class StringUtil {
     }
 
     public static boolean notBlank(String... strings) {
-        if (strings == null)
+        if (strings == null) {
             return false;
-        for (String str : strings)
-            if (str == null || "".equals(str.trim()))
+        }
+        for (String str : strings) {
+            if (str == null || "".equals(str.trim())) {
                 return false;
+            }
+        }
         return true;
     }
 
     public static boolean notNull(Object... paras) {
-        if (paras == null)
+        if (paras == null) {
             return false;
-        for (Object obj : paras)
-            if (obj == null)
+        }
+        for (Object obj : paras) {
+            if (obj == null) {
                 return false;
+            }
+        }
         return true;
     }
 
@@ -118,13 +124,19 @@ public class StringUtil {
     }
 
     public static String noHtml(String s) {
-        if (isBlank(s)) return "";
-        else return s.replaceAll("<[.[^<]]*>", "");
+        if (isBlank(s)) {
+            return "";
+        } else {
+            return s.replaceAll("<[.[^<]]*>", "");
+        }
     }
 
     public static String transHtml(String s) {
-        if (isBlank(s)) return "";
-        else return s.replace("<", "&lt;").replace(">", "&gt;");
+        if (isBlank(s)) {
+            return "";
+        } else {
+            return s.replace("<", "&lt;").replace(">", "&gt;");
+        }
     }
 
     public static List<String> fetchUsers(String str) {
