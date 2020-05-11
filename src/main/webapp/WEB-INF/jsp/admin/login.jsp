@@ -2,56 +2,62 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-  <!doctype html>
-  <html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>IT Valley后台管理系统</title>
-    <link rel="icon" href="/resources/images/favicon.ico">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.8/css/AdminLTE.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.8/css/skins/_all-skins.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.min.css" />
-    <style>
-      @media screen and (max-width: 768px) {
-        .content-header {
-          position: relative;
-          padding: 65px 15px 0 15px;
-        }
-      }
-      body {
-        height: 100%;
-        width: 100%;
-      }
-    </style>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
-    <script src="/resources/admin/js/app.min.js"></script>
+<!doctype html>
+<html lang="zh-CN">
 
-    <script>
-      function toast(txt, icon) {
-        $.toast({
-          text: txt, // Text that is to be shown in the toast
-          heading: '系统提醒', // Optional heading to be shown on the toast
-          icon: icon || 'error', // Type of toast icon warning, info, success, error
-          showHideTransition: 'slide', // fade, slide or plain
-          allowToastClose: true, // Boolean value true or false
-          hideAfter: 2000, // false to make it sticky or number representing the miliseconds as time after which toast needs to be hidden
-          stack: false, // false if there should be only one toast at a time or a number representing the maximum number of toasts to be shown at a time
-          position: 'top-right', // bottom-left or bottom-right or bottom-center or top-left or top-right or top-center or mid-center or an object representing the left, right, top, bottom values
-        });
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>IT Valley后台管理系统</title>
+  <link rel="icon" href="/resources/images/favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.8/css/AdminLTE.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.8/css/skins/_all-skins.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.min.css" />
+  <style>
+    @media screen and (max-width: 768px) {
+      .content-header {
+        position: relative;
+        padding: 65px 15px 0 15px;
       }
-    </script>
-  </head>
-<body class="hold-transition login-page" style="background-image: url(https://s1.ax1x.com/2020/03/16/8JiCcR.jpg);background-repeat: repeat-x;background-attachment: fixed;background-size: cover;">
+    }
+
+    body {
+      height: 100%;
+      width: 100%;
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js">
+  </script>
+  <script src="/resources/admin/js/app.min.js"></script>
+
+  <script>
+    function toast(txt, icon) {
+      $.toast({
+        text: txt, // Text that is to be shown in the toast
+        heading: '系统提醒', // Optional heading to be shown on the toast
+        icon: icon || 'error', // Type of toast icon warning, info, success, error
+        showHideTransition: 'slide', // fade, slide or plain
+        allowToastClose: true, // Boolean value true or false
+        hideAfter: 2000, // false to make it sticky or number representing the miliseconds as time after which toast needs to be hidden
+        stack: false, // false if there should be only one toast at a time or a number representing the maximum number of toasts to be shown at a time
+        position: 'top-right', // bottom-left or bottom-right or bottom-center or top-left or top-right or top-center or mid-center or an object representing the left, right, top, bottom values
+      });
+    }
+  </script>
+</head>
+<!-- https://s1.ax1x.com/2020/03/16/8JiCcR.jpg -->
+<body class="hold-transition login-page"
+  style="background-image: url(/resources/images/admin_login.jpg);background-repeat: repeat-x;background-attachment: fixed;background-size: cover;">
   <div class="login-box">
     <div class="login-logo">
       <a href="javascript:;"><b>IT Valley</b>管理平台</a>
@@ -80,7 +86,8 @@
         </div> -->
         <div class="row">
           <div class="col-xs-8">
-            <input type="checkbox" name="rememberMe" checked id="rememberMe" value="1"> <label for="rememberMe">记住我</label>
+            <!-- <input type="checkbox" name="rememberMe" checked id="rememberMe" value="1"> <label
+              for="rememberMe">记住我</label> -->
           </div>
           <div class="col-xs-4">
             <button type="submit" class="btn btn-primary btn-block btn-flat"><i class="fa fa-adminUser"></i> 登录</button>
@@ -89,5 +96,19 @@
       </form>
     </div>
   </div>
-  </body>
+
+  <script>
+    function wp_attempt_focus() {
+      setTimeout(function () {
+        try {
+          d = document.getElementById('username');
+          d.focus();
+          d.select();
+        } catch (e) {}
+      }, 200);
+    }
+    wp_attempt_focus();
+  </script>
+</body>
+
 </html>

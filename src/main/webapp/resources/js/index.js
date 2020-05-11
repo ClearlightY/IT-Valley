@@ -56,19 +56,19 @@ $(function(){
     }; */
     
   	// 初始化板块的样式
-    function section(){
-      if(tab == "good"){
-        $("#tab li:eq(1)").addClass("active");
-      }else if(tab == "newest"){
-        $("#tab li:eq(2)").addClass("active");
-      }else if(tab == "noReply"){
-        $("#tab li:eq(3)").addClass("active");
-      }else{
-        $("#tab li:eq(0)").addClass("active");
-      }
-    };
+    // function section(){
+    //   if(tab == "good"){
+    //     $("#tab li:eq(1)").addClass("active");
+    //   }else if(tab == "newest"){
+    //     $("#tab li:eq(2)").addClass("active");
+    //   }else if(tab == "noReply"){
+    //     $("#tab li:eq(3)").addClass("active");
+    //   }else{
+    //     $("#tab li:eq(0)").addClass("active");
+    //   }
+    // };
     //session();
-    section();
+    // section();
     /* $(".pagination2").pagination("${page.pageNumber}","${page.totalPage}",10);*/
     
     /*function changeSectionHref(){
@@ -80,12 +80,12 @@ $(function(){
     /*changeSectionHref();*/
    
     //改变当前选中板块的样式
-    $("#tab li").each(function(){
-    	if(tab == $(this).attr("class")){
-    		$("#tab li").removeClass("active");
-    		$(this).addClass("active");
-    	}
-    })
+    // $("#tab li").each(function(){
+    // 	if(tab == $(this).attr("class")){
+    // 		$("#tab li").removeClass("active");
+    // 		$(this).addClass("active");
+    // 	}
+    // })
    
    function showScroll(){
     $(window).scroll( function(){ 
