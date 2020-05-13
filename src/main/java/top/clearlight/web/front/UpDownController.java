@@ -11,6 +11,7 @@ import top.clearlight.dto.Result;
 import top.clearlight.entity.User;
 import top.clearlight.entity.UpDown;
 import top.clearlight.service.UpDownService;
+import top.clearlight.service.UserService;
 
 /**
  * 点赞或者点踩
@@ -23,19 +24,25 @@ public class UpDownController extends BaseController{
 
 	@Autowired
 	private UpDownService upDownService;
+
+	@Autowired
+	private UserService userService;
 	
 	@RequestMapping(value = "/vote",method = RequestMethod.GET)
-	private Result<DMLExecution> up(Integer tid,boolean vote,HttpServletRequest request){
+	private Result<DMLExecution> up(Integer tid,boolean vote, String author, HttpServletRequest request){
 		User user = getUser(request);
 		if(user == null) {
 			return new Result<>(false,"未登录");
 		}
+		User t_user = userService.findByName(author);
+		int t_uid = t_user.getUserId();
 		UpDown upDown = new UpDown();
 		upDown.setUid(user.getUserId());
 		upDown.setTid(tid);
 		upDown.setUpDown(vote);
 		upDown.setCreateDate(new Date());
 		upDown.setDelete(false);
+		upDown.setT_uid(t_uid);
 		DMLExecution save = upDownService.save(upDown);
 		return new Result<DMLExecution>(true,save);
 	}

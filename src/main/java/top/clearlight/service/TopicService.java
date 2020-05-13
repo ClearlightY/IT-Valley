@@ -257,6 +257,13 @@ public interface TopicService {
     PageDataBody<Topic> pageForAdmin(String author,String startDate,String endDate,Integer pageNumber, Integer pageSize);
     
     int countAllForAdmin(String author,String startDate,String endDate);
-    
+
+	/**
+	 * 统计用户文章的点赞数量
+	 * @param id
+	 * @return
+	 */
+    int countClick(Integer id);
+
     Topic findById(Integer id);
 }

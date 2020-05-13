@@ -78,6 +78,7 @@ public class UserController extends BaseController {
         int countReply = rootReplyService.countByName(name);//评论的数量
         int countScore = rootUserService.countScore(user.getUserId());//积分
         int countVisit = visitService.count(user.getUserId());//被访问的次数
+        int countTopicClick = rootTopicService.countClick(user.getUserId()); // 文章点赞的数量
         //当用户为登录状态并且访问者与被访问者不是同一个人时，添加访问记录
         if (user2 != null && user.getUserId() != user2.getUserId()) {
             Visit visit = new Visit();
@@ -91,11 +92,18 @@ public class UserController extends BaseController {
         model.addAttribute("user2", user2);
         model.addAttribute("replyPage", replyPage);
         model.addAttribute("topicPage", topicPage);
+        // 文章
         model.addAttribute("countTopic", countTopic);
+        // 收藏
         model.addAttribute("countCollect", countCollect);
+        // 评论
         model.addAttribute("countReply", countReply);
+        // 积分
         model.addAttribute("countScore", countScore);
+        // 访问量
         model.addAttribute("countVisit", countVisit);
+        // 点赞量
+        model.addAttribute("countTopicClick", countTopicClick);
         return "user/detail";
     }
 

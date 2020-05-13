@@ -681,4 +681,12 @@
 			AND create_date BETWEEN #{startDate} and #{endDate}
 		</if>
     </select>
+
+    <!-- 用户文章点赞数量 -->
+    <select id="countTopicUp" resultType="java.lang.Integer">
+        select count(1)
+        from up_down
+        where t_uid = #{uid}
+        and up_down=1;
+    </select>
 </mapper>

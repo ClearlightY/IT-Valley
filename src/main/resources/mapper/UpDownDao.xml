@@ -20,12 +20,13 @@
         <id column="id" jdbcType="INTEGER" property="id"/>
         <result column="uid" jdbcType="INTEGER" property="uid"/>
         <result column="tid" jdbcType="INTEGER" property="tid"/>
+        <result column="t_uid" jdbcType="INTEGER" property="t_uid"/>
         <result column="up_down" jdbcType="BIT" property="upDown"/>
         <result column="create_date" jdbcType="TIMESTAMP" property="createDate"/>
         <result column="is_delete" jdbcType="BIT" property="isDelete"/>
     </resultMap>
     <sql id="Base_Column_List">
-        id, uid, tid, up_down,create_date, is_delete
+        id, uid, tid, t_uid, up_down,create_date, is_delete
     </sql>
     <!-- 分页查询 -->
     <!-- <select id="select" resultType="User">
@@ -52,6 +53,7 @@
         (id, 
          uid,
          tid,
+         t_uid,
          up_down,
          create_date,
          is_delete)
@@ -59,6 +61,7 @@
         (#{id,jdbcType=INTEGER}, 
          #{uid,jdbcType=INTEGER}, 
          #{tid,jdbcType=INTEGER},
+         #{t_uid, jdbcType=INTEGER},
          #{upDown,jdbcType=BIT},
          #{createDate,jdbcType=TIMESTAMP},
          #{isDelete,jdbcType=BIT})

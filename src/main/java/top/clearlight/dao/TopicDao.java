@@ -306,4 +306,11 @@ public interface TopicDao {
      * @return
      */
     int countAllForAdmin(@Param("author") String author,@Param("startDate") String startDate,@Param("endDate") String endDate);
+
+    /**
+     * 统计文章点赞数
+     * @param id
+     * @return
+     */
+    int countTopicUp(@Param("uid") Integer id);
 }

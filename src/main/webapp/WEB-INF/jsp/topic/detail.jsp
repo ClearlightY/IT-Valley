@@ -38,11 +38,11 @@
               				</c:choose>
 								<p>
 									<div id="topic_${topic.topicId}_votes" class="votes">
-										<a href="javascript:" onclick="voteTopic(${topic.topicId},true);"
+										<a href="javascript:" onclick="voteTopic(${topic.topicId},'${topic.author}',true);"
 										class="vote vote_up" title="0 赞同">
 										<li class="fa fa-chevron-up"></li>
 									</a> <a href="javascript:"
-									onclick="voteTopic(${topic.topicId},false);" class="vote vote_down" title="0 反对">
+									onclick="voteTopic(${topic.topicId},'${topic.author}',false);" class="vote vote_down" title="0 反对">
 									<li class="fa fa-chevron-down"></li>
 								</a>
 							</div>
@@ -73,6 +73,7 @@
 	<div class="divide"></div>
 	<div class="panel-body topic-detail-content show_big_image">
 		${topic.content}
+		<br/>
 		<div>
 			<a href="/tag/${topic.tag}"><span
 				class="label label-success">${topic.tag}</span></a>
@@ -334,13 +335,15 @@
 	 }
 	 upCount();
 	 downCount();
-	 function voteTopic(tid,action){
+	 function voteTopic(tid,author,action){
+		 console.log("执行了点赞");
 	 	$.ajax({
 	 		url:"/topic/vote",
 	 		type:"get",
 	 		dataType:"json",
 	 		data:{
-	 			tid:tid,
+				 tid:tid,
+				 author:author,
 	 			vote:action
 	 		},
 	 		success:function(data){

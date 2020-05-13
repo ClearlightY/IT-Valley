@@ -391,7 +391,17 @@ public class TopicServiceImpl implements TopicService{
 		return rootTopicDao.countAllForAdmin(author, startDate, endDate);
 	}
 
-	
+	/**
+	 * 统计用户的点赞量
+	 * @param id
+	 * @return
+	 */
+	@Override
+	public int countClick(Integer id) {
+		return rootTopicDao.countTopicUp(id);
+	}
+
+
 	@Override
 	public Topic findById(Integer id) {
 		return rootTopicDao.selectByTopicId(id);

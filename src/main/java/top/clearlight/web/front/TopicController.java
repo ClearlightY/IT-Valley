@@ -128,7 +128,9 @@ private Logger logger = LoggerFactory.getLogger(this.getClass());
 		// ApiAssert.notNull(nodeCode, "节点不能为空");
 		// ApiAssert.notNull(tag, "标签不能为空");
 		//TopicExecution saveTopic = rootTopicService.saveTopic(topic);
-		if(StringUtils.isEmpty(tag)) tag = null;
+		if(StringUtils.isEmpty(tag)) {
+			tag = null;
+		}
 		TopicExecution saveTopic = rootTopicService.createTopic(title, content, null, null, null, tag ,user);
 		//logger.debug(saveTopic.toString());
 		return new Result<TopicExecution>(true, saveTopic);

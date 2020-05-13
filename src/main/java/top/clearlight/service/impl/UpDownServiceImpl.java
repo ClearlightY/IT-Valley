@@ -12,10 +12,6 @@ import top.clearlight.exception.OperationFailedException;
 import top.clearlight.exception.OperationSystemException;
 import top.clearlight.service.UpDownService;
 
-/**
- * 
- * @author sen 2018年8月11日 上午11:45:07 TODO
- */
 @Service
 public class UpDownServiceImpl implements UpDownService {
 

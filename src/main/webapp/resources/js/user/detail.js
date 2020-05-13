@@ -140,6 +140,9 @@ function topicList(pageNumber) {
 			p : pageNumber
 		},
 		success : function(data) {
+			console.log("数据是："+data+",数据类型："+typeof data);
+			console.log("具体内容:"+data.data);
+			console.log(data.data.list);
 			$(".itemList").html('');
 			for(var i = 0;i < data.data.list.length; i++){
 				$(".itemList").append("<div class=\"panel-body paginate-bot\"\
@@ -151,8 +154,6 @@ function topicList(pageNumber) {
 					</div>\
 					<div class=\"tip\">\
 					<p>\
-					<span><a href=\"/n/"+data.data.list[i].nodeTitle+"\" class=\"node\">"+data.data.list[i].nodeTitle+"</a></span>\
-					<span>•</span>\
 					<a href=\"/user/"+data.data.list[i].author+"\" class=\"author_name\">"+data.data.list[i].author+"</a>\
 					<span class=\"hidden-sm hidden-xs\">•</span>\
 					<span class=\"hidden-sm hidden-xs\">"+data.data.list[i].viewCount+"次点击</span>\
@@ -233,8 +234,6 @@ function collectList(pageNumber) {
 					<div class=\"title\"> <a href=\"/topic/"+data.data.list[i].topicId+"\"> "+data.data.list[i].title+" </a></div>\
 					<div class=\"tip\">\
 					<p>\
-					<span><a href=\"/n/"+data.data.list[i].nodeTitle+"\" class=\"node\">"+data.data.list[i].nodeTitle+"</a></span>\
-					<span>•</span>\
 					<a href=\"/user/"+data.data.list[i].author+"\" class=\"author_name\">"+data.data.list[i].author+"</a>\
 					<span class=\"hidden-sm hidden-xs\">•</span>\
 					<span class=\"hidden-sm hidden-xs\">"+data.data.list[i].viewCount+"次点击</span>\
@@ -279,8 +278,6 @@ function followList(pageNumber) {
 					<div class=\"title\"><a href=\"/topic/"+data.data.list[i].topicId+"\"> "+data.data.list[i].title+" </a></div>\
 					<div class=\"tip\">\
 					<p>\
-					<span><a href=\"/n/"+data.data.list[i].nodeTitle+"\" class=\"node\">"+data.data.list[i].nodeTitle+"</a></span>\
-					<span>•</span>\
 					<a href=\"/user/"+data.data.list[i].author+"\" class=\"author_name\">"+data.data.list[i].author+"</a>\
 					<span class=\"hidden-sm hidden-xs\">•</span>\
 					<span class=\"hidden-sm hidden-xs\">"+data.data.list[i].viewCount+"次点击</span>\

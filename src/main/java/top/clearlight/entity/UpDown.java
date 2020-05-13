@@ -2,13 +2,6 @@ package top.clearlight.entity;
 
 import java.util.Date;
 
-/**
- * 点赞
- * @author sen
- * 2018年8月11日
- * 上午10:31:00
- * TODO
- */
 public class UpDown {
 
 	/**
@@ -22,10 +15,23 @@ public class UpDown {
 	private Integer uid;
 	
 	/**
-	 * 话题ID
+	 * 文章ID
 	 */
 	private Integer tid;
-	
+
+	/**
+	 * 文章的作者id
+	 */
+	private Integer t_uid;
+
+	public Integer getT_uid() {
+		return t_uid;
+	}
+
+	public void setT_uid(Integer t_uid) {
+		this.t_uid = t_uid;
+	}
+
 	/**
 	 * true:up false:down
 	 */
@@ -91,8 +97,14 @@ public class UpDown {
 
 	@Override
 	public String toString() {
-		return "UpDown [id=" + id + ", uid=" + uid + ", tid=" + tid + ", upDown=" + upDown + ", createDate="
-				+ createDate + ", isDelete=" + isDelete + "]";
+		return "UpDown{" +
+				"id=" + id +
+				", uid=" + uid +
+				", tid=" + tid +
+				", t_uid=" + t_uid +
+				", upDown=" + upDown +
+				", createDate=" + createDate +
+				", isDelete=" + isDelete +
+				'}';
 	}
-	
 }

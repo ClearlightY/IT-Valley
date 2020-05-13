@@ -4,10 +4,6 @@ import java.util.Date;
 
 /**
  * 关注实体
- * @author sen
- * 2018年7月1日
- * 下午8:28:39
- * TODO
  */
 public class Follow {
 
