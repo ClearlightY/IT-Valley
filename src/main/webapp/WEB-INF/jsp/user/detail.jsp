@@ -91,17 +91,17 @@
                                             <span class="links-of-author-item_1">排名 <span class="gray">2</span></span>
                                         </div>
                                         <div class="person_url">
-                                            <c:if test="${user.url !=null && user.url != ' '}">
-                                                <span class="links-of-author-item"><a href="https://${user.url}"
+                                            <c:if test="${user.url !=null && user.url != ''}">
+                                                <span class="links-of-author-item"><a href="http://${user.url}"
                                                         target="_blank" title="website"><i
                                                             class="fa fa-globe fa-fw"></i>Website</a> </span>
                                             </c:if>
-                                            <c:if test="${user.email != null && user.email != ' '}">
+                                            <c:if test="${user.email != null && user.email != ''}">
                                                 <span class="links-of-author-item"><a href="mailto:${user.email}"
                                                         target="_blank" title="E-Mail"><i
                                                             class="fa fa-fw fa-envelope"></i>E-Mail</a> </span>
                                             </c:if>
-                                            <c:if test="${user.thirdId != null && user.thirdId != ' '}">
+                                            <c:if test="${user.thirdId != null && user.thirdId != ''}">
                                                 <span class="links-of-author-item gray"><a id="a_github" target="_blank"
                                                         href="https://${user.thirdId}" title="GitHub"><i
                                                             class="fa fa-fw fa-github"></i>GitHub</a> </span>

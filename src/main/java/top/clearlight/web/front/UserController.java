@@ -110,7 +110,7 @@ public class UserController extends BaseController {
     /**
      * 查看用户创建的更多话题
      *
-     * @param name
+     * @param request
      * @param model
      * @param p
      * @return
@@ -210,27 +210,27 @@ public class UserController extends BaseController {
                                   String signature, HttpServletRequest request, HttpServletResponse response) {
         //User user = null;
         User user = getUser(request);
-        System.out.println("邮箱:" + email);
-        System.out.println("网站:" + url);
-        System.out.println("github:" + thirdId);
         //String cookie = CookieAndSessionUtil.getCookie(request, "user");
         if (user != null) {
             //user = rootUserService.findByName(Base64Util.decode(cookie));
             if (email.trim().isEmpty()) {
-                user.setEmail(" ");
+                user.setEmail("");
             } else {
-                user.setEmail(email);
+                user.setEmail(email.trim());
             }
-            user.setEmail(email);
+            url = url.replace("http://", "");
+            url = url.replace("https://", "");
+            thirdId = thirdId.replace("http://", "");
+            thirdId = thirdId.replace("https://", "");
             if (url.trim().isEmpty()) {
-                user.setUrl(" ");
+                user.setUrl("");
             } else {
-                user.setUrl(url);
+                user.setUrl(url.trim());
             }
             if (thirdId.trim().isEmpty()) {
                 user.setThirdId(" ");
             } else {
-                user.setThirdId(thirdId);
+                user.setThirdId(thirdId.trim());
             }
             user.setUserAddr(userAddr);
             user.setSignature(signature);
