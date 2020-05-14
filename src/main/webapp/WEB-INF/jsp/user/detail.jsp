@@ -25,15 +25,20 @@
 
         .links-of-author-item {
             margin-left: 11px;
+            font-size: 13px;
+        }
+
+        .links-of-author-item_1 {
+            margin-left: 8px;
             font-size: 14px;
         }
 
         .person_url {
-            margin-top: 8px;
+            margin-top: 16px;
         }
 
         .user_detail {
-            margin-top: 5px;
+            margin-top: 13px;
         }
     </style>
 </head>
@@ -71,32 +76,32 @@
                                             <div class="sep5"></div>
                                         </span>
                                         <div class="user_detail">
-                                            <span class="links-of-author-item">文章 <span
+                                            <span class="links-of-author-item_1">文章 <span
                                                     class="gray">${countTopic}</span></span>
-                                            <span class="links-of-author-item">收藏 <span
+                                            <span class="links-of-author-item_1">收藏 <span
                                                     class="gray">${countCollect}</span></span>
-                                            <span class="links-of-author-item">评论 <span
+                                            <span class="links-of-author-item_1">评论 <span
                                                     class="gray">${countReply}</span></span>
-                                            <span class="links-of-author-item">获赞 <span
+                                            <span class="links-of-author-item_1">获赞 <span
                                                     class="gray">${countTopicClick}</span></span>
-                                            <span class="links-of-author-item">积分 <span
+                                            <span class="links-of-author-item_1">积分 <span
                                                     class="gray">${countScore}</span></span>
-                                            <span class="links-of-author-item">访问 <span
+                                            <span class="links-of-author-item_1">访问 <span
                                                     class="gray">${countVisit}</span></span>
-                                            <span class="links-of-author-item">排名 <span class="gray">2</span></span>
+                                            <span class="links-of-author-item_1">排名 <span class="gray">2</span></span>
                                         </div>
                                         <div class="person_url">
-                                            <c:if test="${user.url !=null}">
+                                            <c:if test="${user.url !=null && user.url != ' '}">
                                                 <span class="links-of-author-item"><a href="https://${user.url}"
                                                         target="_blank" title="website"><i
                                                             class="fa fa-globe fa-fw"></i>Website</a> </span>
                                             </c:if>
-                                            <c:if test="${user.email != null}">
+                                            <c:if test="${user.email != null && user.email != ' '}">
                                                 <span class="links-of-author-item"><a href="mailto:${user.email}"
                                                         target="_blank" title="E-Mail"><i
                                                             class="fa fa-fw fa-envelope"></i>E-Mail</a> </span>
                                             </c:if>
-                                            <c:if test="${user.thirdId != null}">
+                                            <c:if test="${user.thirdId != null && user.thirdId != ' '}">
                                                 <span class="links-of-author-item gray"><a id="a_github" target="_blank"
                                                         href="https://${user.thirdId}" title="GitHub"><i
                                                             class="fa fa-fw fa-github"></i>GitHub</a> </span>
@@ -108,7 +113,7 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <div class="sep5"></div>
+                        <!-- <div class="sep5"></div> -->
                     </div>
                 </div>
                 <div class="sep20"></div>

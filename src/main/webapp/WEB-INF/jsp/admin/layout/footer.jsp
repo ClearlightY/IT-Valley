@@ -4,8 +4,8 @@
   <div class="pull-right hidden-xs">
     <b>Version</b> 2.4.8
   </div>
-  <strong>Copyright © 2014-2016 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights
-  reserved.
+  <strong>Copyright © 2019-2020 <a href="http://clearlight.top">IT Valley</a> Version 1.0</strong>
+
 </footer>
 <div class="control-sidebar-bg"></div>
 </div>

@@ -27,7 +27,7 @@
             <form id="form">
               <div class="form-group">
                 <label for="title">标题</label>
-                <input type="text" class="form-control" id="title" name="title" placeholder="请输入话题标题">
+                <input type="text" class="form-control" id="title" name="title" placeholder="请输入文章标题">
               </div>
               <div class="form-group">
                 <label for="content">内容</label>
@@ -60,7 +60,7 @@
                 <div class="form-group">
                   <label for="title">标签</label>
                   <input type="text" class="form-control" id="tag" name="title"
-                    placeholder="请为你的主题选择一个标签。恰当的归类会让你发布的信息更加有用">
+                    placeholder="请为你的文章选择一个标签。恰当的归类会让你发布的信息更加有用">
                 </div>
               </div>
               <button type="button" id="btn" class="btn btn-default">发布</button>

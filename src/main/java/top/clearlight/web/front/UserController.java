@@ -210,12 +210,28 @@ public class UserController extends BaseController {
                                   String signature, HttpServletRequest request, HttpServletResponse response) {
         //User user = null;
         User user = getUser(request);
+        System.out.println("邮箱:" + email);
+        System.out.println("网站:" + url);
+        System.out.println("github:" + thirdId);
         //String cookie = CookieAndSessionUtil.getCookie(request, "user");
         if (user != null) {
             //user = rootUserService.findByName(Base64Util.decode(cookie));
+            if (email.trim().isEmpty()) {
+                user.setEmail(" ");
+            } else {
+                user.setEmail(email);
+            }
             user.setEmail(email);
-            user.setUrl(url);
-            user.setThirdId(thirdId);
+            if (url.trim().isEmpty()) {
+                user.setUrl(" ");
+            } else {
+                user.setUrl(url);
+            }
+            if (thirdId.trim().isEmpty()) {
+                user.setThirdId(" ");
+            } else {
+                user.setThirdId(thirdId);
+            }
             user.setUserAddr(userAddr);
             user.setSignature(signature);
             rootUserService.updateUser(user);
