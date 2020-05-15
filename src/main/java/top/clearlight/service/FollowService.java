@@ -19,9 +19,9 @@ public interface FollowService {
 	PageDataBody<User> page(Integer pageNumber, Integer pageSize, Integer uid);
 
 	/**
-	 * 关注的人的id
+	 * 我关注的用户
 	 */
-	// List<Integer> followUserID(Integer uid);
+	List<User> followUser(Integer uid);
 	
 	/**
 	 * 关注人的主题

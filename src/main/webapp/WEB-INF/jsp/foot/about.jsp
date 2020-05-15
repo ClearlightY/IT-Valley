@@ -2,7 +2,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java"%>
 <html>
 <head>
-<title>关于-Roothub</title>
+<title>关于-IT Valley</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="/resources/css/bootstrap.min.css" rel="stylesheet">
 <link href="/resources/css/app.css" rel="stylesheet" type="text/css">
@@ -18,10 +18,10 @@
 						<a href="/">主页</a> / About
 					</div>
 					<div class="panel-body" style="color: #333;">
-						<h1 style="margin-top: 0px;">About Roothub</h1>
-<br>Roothub 是技术与资讯的社区，您可以在这里发表自己正在做的有趣事物。
+						<h1 style="margin-top: 0px;">About IT Valley</h1>
+<br>IT Valley 是技术与资讯的社区，您可以在这里发表自己正在做的有趣事物。
 <br>
-<br>为了保持这里的良好氛围，Roothub 有自己的明确规则：
+<br>为了保持这里的良好氛围，IT Valley 有自己的明确规则：
 <br>
 <br>• 禁止分享或讨论任何涉及版权盗用的内容
 <br>
@@ -38,7 +38,7 @@
 <br>• 遵守中国的法律
 <br>
 
-<br>为了获得访问 Roothub 的最佳体验，我们推荐使用 <a href="http://chrome.google.com/" target="_blank">Google Chrome</a> 或 <a href="http://www.getfirefox.com/" target="_blank">Mozilla Firefox</a> 浏览器。
+<br>为了获得访问 IT Valley 的最佳体验，我们推荐使用 <a href="http://chrome.google.com/" target="_blank">Google Chrome</a> 或 <a href="http://www.getfirefox.com/" target="_blank">Mozilla Firefox</a> 浏览器。
 					</div>
 				</div>
 			</div>

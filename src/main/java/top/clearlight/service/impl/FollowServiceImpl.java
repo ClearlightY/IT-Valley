@@ -29,13 +29,13 @@ public class FollowServiceImpl implements FollowService{
 	}
 
 	/**
-	 * 关注的用户的id
+	 * 我关注的用户
 	 */
-	/*@Override
-	public List<Integer> followUserID(Integer uid) {
-		List<Integer> fid = followDao.select(uid);
+	@Override
+	public List<User> followUser(Integer uid) {
+		List<User> fid = followDao.selectByUid(uid);
 		return fid;
-	}*/
+	}
 
 
 	/**

@@ -1,7 +1,11 @@
 package top.clearlight.web.admin;
 
 import java.util.Date;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import org.apache.shiro.authz.annotation.RequiresPermissions;
+import org.apache.taglibs.standard.tag.common.sql.DataSourceUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -119,9 +123,20 @@ public class TopicAdminController {
 	@RequiresPermissions("topic:edit")
 	@RequestMapping(value = "/edit",method = RequestMethod.GET)
 	public String edit(@RequestParam("id") Integer id,Model model) {
+		Topic topic = topicService.findById(id);
+		String content = topic.getContent();
+		System.out.println(content);
+		if (content!=null) {
+			// Pattern p = Pattern.compile("\\s*|\t|\r|\n");
+			// Matcher m = p.matcher(content);
+			// content = m.replaceAll("");
+			content = content.replace("\"","\'");
+		}
+		// System.out.println(content);
 		model.addAttribute("topic", topicService.findById(id));
 		model.addAttribute("nodes", nodeService.findAll(null, null));
 		model.addAttribute("vEnter", "\n");
+		model.addAttribute("content", content);
 		return "/admin/topic/edit";
 	}
 	

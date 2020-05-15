@@ -8,19 +8,19 @@
 <div class="content-wrapper" style="padding: 50px 0 40px;">
 	<section class="content-header">
     <h1>
-      话题
+      文章
       <small>列表</small>
     </h1>
     <ol class="breadcrumb">
       <li><a href="/admin/index"><i class="fa fa-dashboard"></i> 首页</a></li>
-      <li><a href="/admin/topic/list">话题</a></li>
+      <li><a href="/admin/topic/list">文章</a></li>
       <li class="active">列表</li>
     </ol>
   </section>
   <section class="content">
     <div class="box box-info">
       <div class="box-header with-border">
-        <h3 class="box-title">话题列表</h3>
+        <h3 class="box-title">文章列表</h3>
       </div>
       <!-- /.box-header -->
       <div class="box-body">
@@ -37,11 +37,11 @@
         <table class="table table-bordered">
           <thead>
           <tr>
-            <th>#</th>
+            <th>ID</th>
             <th>标题</th>
             <th>用户</th>
             <th>状态</th>
-            <th>节点</th>
+            <!-- <th>节点</th> -->
             <th>时间</th>
             <th>操作</th>
           </tr>
@@ -57,7 +57,7 @@
               <c:if test="${topic.good}">精华</c:if>
                   &nbsp;
               </td>
-              <td>${topic.nodeTitle}</td>
+              <!-- <td>${topic.nodeTitle}</td> -->
               <td><fmt:formatDate type="both" value="${topic.createDate}" /></td>
               <td>
                   <shiro:hasPermission name="topic:top">
@@ -126,13 +126,13 @@
   		var tip = $(self).text().replace(/[\r\n]/g, '').trim();
   		if(action === 'top'){
   			url = '/admin/topic/top?id=' + id;
-  			msg = '确定' + tip + '这条话题吗？';
+  			msg = '确定' + tip + '这篇文章吗？';
   		}else if(action === 'good'){
   			url = '/admin/topic/good?id=' + id;
-  	        msg = '确定'+tip+'这条话题吗？';
+  	        msg = '确定'+tip+'这篇文章吗？';
   		}else if(action === 'delete'){
   			url = '/admin/topic/delete?id=' + id;
-  	        msg = '确定要删除这条话题吗？';
+  	        msg = '确定要删除这篇文章吗？';
   		}
   		if(confirm(msg)){
   			$.get(url,function(data){

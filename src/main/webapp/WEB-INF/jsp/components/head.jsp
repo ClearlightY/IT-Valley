@@ -25,11 +25,25 @@
 			position: absolute;
 			right: 20px;
 			top: 14.3px;
+			margin-right: 250px;
 		}
 
-		@media (max-width: 1430px) {
+		.weather-position_1 {
+			position: absolute;
+			right: 20px;
+			top: 14.3px;
+			/* margin-right: 250px; */
+			display: none;
+		}
+
+		@media (max-width: 1865px) {
 			.weather-position {
 				display: none;
+			}
+		}
+		@media (min-width: 1430px) and (max-width: 1865px) {
+			.weather-position_1 {
+				display: block;
 			}
 		}
 	</style>
@@ -67,6 +81,7 @@
 				</ul>
 			</div>
 			<div id="tp-weather-widget" class="weather-position"></div>
+			<div id="tp-weather-widget_1" class="weather-position_1"></div>
 		</div>
 	</nav>
 	<div class="container" style="padding: 0 25px;">
@@ -142,8 +157,41 @@
 				theme: "auto",
 				token: "d7fee291-95b6-4fea-8ab0-863c6f9babb7",
 				hover: "disabled",
-				container: "tp-weather-widget"
+				container: "tp-weather-widget_1"
 			});
+			
+			(function (a, h, g, f, e, d, c, b) {
+				b = function () {
+					d = h.createElement(g);
+					c = h.getElementsByTagName(g)[0];
+					d.src = e;
+					d.charset = "utf-8";
+					d.async = 1;
+					c.parentNode.insertBefore(d, c)
+				};
+				a["SeniverseWeatherWidgetObject"] = f;
+				a[f] || (a[f] = function () {
+					(a[f].q = a[f].q || []).push(arguments)
+				});
+				a[f].l = +new Date();
+				if (a.attachEvent) {
+					a.attachEvent("onload", b)
+				} else {
+					a.addEventListener("load", b, false)
+				}
+			}(window, document, "script", "SeniverseWeatherWidget", "//cdn.sencdn.com/widget2/static/js/bundle.js?t=" +
+				parseInt((new Date().getTime() / 100000000).toString(), 10)));
+			window.SeniverseWeatherWidget('show', {
+				flavor: "slim",
+				location: "WX4BZD6KEJFY",
+				geolocation: true,
+				language: "zh-Hans",
+				unit: "c",
+				theme: "auto",
+				token: "d7fee291-95b6-4fea-8ab0-863c6f9babb7",
+				hover: "enabled",
+				container: "tp-weather-widget"
+			})
 		</script>
 </body>
 

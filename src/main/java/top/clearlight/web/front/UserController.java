@@ -69,16 +69,26 @@ public class UserController extends BaseController {
         if (user == null) {
             return "error-page/404";
         }
-        User user2 = getUser(request);//当前用户
-        // System.out.println("user2::" + user2);
+        //当前用户
+        User user2 = getUser(request);
         PageDataBody<Topic> topicPage = rootTopicService.pageByAuthor(tp, 20, name);
         PageDataBody<ReplyAndTopicByName> replyPage = rootReplyService.findAllByNameAndTopic(name, rp, 20);
-        int countTopic = rootTopicService.countByUserName(user.getUserName());//主题数量
-        int countCollect = collectDaoService.count(user.getUserId());//用户收藏话题的数量
-        int countReply = rootReplyService.countByName(name);//评论的数量
-        int countScore = rootUserService.countScore(user.getUserId());//积分
-        int countVisit = visitService.count(user.getUserId());//被访问的次数
-        int countTopicClick = rootTopicService.countClick(user.getUserId()); // 文章点赞的数量
+        //主题数量
+        int countTopic = rootTopicService.countByUserName(user.getUserName());
+        //用户收藏话题的数量
+        int countCollect = collectDaoService.count(user.getUserId());
+        //评论的数量
+        int countReply = rootReplyService.countByName(name);
+        //积分
+        int countScore = rootUserService.countScore(user.getUserId());
+        //被访问的次数
+        int countVisit = visitService.count(user.getUserId());
+        // 文章点赞的数量
+        int countTopicClick = rootTopicService.countClick(user.getUserId());
+        // 当前用户的排行名次
+        int rankTotal = rootUserService.rankTotal(user.getUserId());
+        System.out.println("当前用户的排名为：" + rankTotal);
+
         //当用户为登录状态并且访问者与被访问者不是同一个人时，添加访问记录
         if (user2 != null && user.getUserId() != user2.getUserId()) {
             Visit visit = new Visit();
@@ -104,13 +114,15 @@ public class UserController extends BaseController {
         model.addAttribute("countVisit", countVisit);
         // 点赞量
         model.addAttribute("countTopicClick", countTopicClick);
+        // 排行名词
+        model.addAttribute("rankTotal", rankTotal);
         return "user/detail";
     }
 
     /**
      * 查看用户创建的更多话题
      *
-     * @param request
+     * @param request /
      * @param model
      * @param p
      * @return

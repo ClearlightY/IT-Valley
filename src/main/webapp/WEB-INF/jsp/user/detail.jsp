@@ -31,6 +31,7 @@
         .links-of-author-item_1 {
             margin-left: 8px;
             font-size: 14px;
+            color: #999;
         }
 
         .person_url {
@@ -77,18 +78,19 @@
                                         </span>
                                         <div class="user_detail">
                                             <span class="links-of-author-item_1">文章 <span
-                                                    class="gray">${countTopic}</span></span>
-                                            <span class="links-of-author-item_1">收藏 <span
-                                                    class="gray">${countCollect}</span></span>
+                                                    style="color: black">${countTopic}</span></span>
+                                            <span class="links-of-author-item_1">收藏
+                                                <span style="color: black">${countCollect}</span></span>
                                             <span class="links-of-author-item_1">评论 <span
-                                                    class="gray">${countReply}</span></span>
-                                            <span class="links-of-author-item_1">获赞 <span
-                                                    class="gray">${countTopicClick}</span></span>
+                                                    style="color: black">${countReply}</span></span>
+                                            <span class="links-of-author-item_1">获赞
+                                                <span style="color: black">${countTopicClick}</span></span>
                                             <span class="links-of-author-item_1">积分 <span
-                                                    class="gray">${countScore}</span></span>
+                                                    style="color: black">${countScore}</span></span>
                                             <span class="links-of-author-item_1">访问 <span
-                                                    class="gray">${countVisit}</span></span>
-                                            <span class="links-of-author-item_1">排名 <span class="gray">2</span></span>
+                                                    style="color: black">${countVisit}</span></span>
+                                            <span class="links-of-author-item_1">排名 <span
+                                                    style="color: black">${rankTotal}</span></span>
                                         </div>
                                         <div class="person_url">
                                             <c:if test="${user.url !=null && user.url != ''}">

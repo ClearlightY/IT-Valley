@@ -2,7 +2,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java"%>
 <html>
 <head>
-<title>愿景-Roothub</title>
+<title>愿景-IT Valley</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="/resources/css/bootstrap.min.css" rel="stylesheet">
 <link href="/resources/css/app.css" rel="stylesheet" type="text/css">
@@ -19,7 +19,7 @@
 					</div>
 					<div class="panel-body" style="color: #333;">
 						<h1 style="margin-top: 0px;">愿景</h1>
-						Roothub的愿景是为喜欢代码的伙伴提供一点微小的帮助。
+						IT Valley的愿景是为喜欢代码的伙伴提供一点微小的帮助。
 					</div>
 				</div>
 			</div>

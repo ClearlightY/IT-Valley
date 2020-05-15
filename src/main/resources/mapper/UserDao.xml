@@ -2,15 +2,15 @@
 <!DOCTYPE mapper
     PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-    
+
     <!-- Mybatis会动态实现daoImpl,不过需要在mapper文件夹下创建BookDao.xml和AppointmentDao.xml
   		spring-dao.xml文件会自动扫描mapper文件夹下的配置 -->
-    <!-- 
+    <!--
     1.namespace是该xml对应的接口的全名
     2.select和update中的id对应方法名
     3.resultType是返回值类型
     4.parameterType是参数类型(可选)
-    5.#{...}填写的是方法的参数 
+    5.#{...}填写的是方法的参数
     6.parameterType:输入参数类型
     7.resultType:输出参数类型
     -->
@@ -277,21 +277,21 @@
 		WHERE
 			user_id = #{userId}
 	</select>
-	
+
 	<!-- 统计当天的用户数 -->
 	<select id="countToday" resultType="java.lang.Integer">
         select count(1)
         from user a
         where TO_DAYS(a.create_date) = TO_DAYS(NOW())
     </select>
-    
+
     <!-- 用户列表 -->
     <select id="selectAllForAdmin" resultType="User">
 		SELECT
         	*
 		FROM
 			user
-		WHERE 
+		WHERE
 			1 = 1
 		<if test="username != null">
 		AND user_name like CONCAT('%',#{username},'%')
@@ -307,14 +307,14 @@
             </if>
         </if>
      </select>
-     
+
      <!-- 后台话题统计 -->
      <select id="countAllForAdmin" resultType="java.lang.Integer">
         SELECT
         	COUNT(1)
         FROM
         	user
-        WHERE 
+        WHERE
 			1 = 1
 		<if test='username != null'>
 			AND user_name like CONCAT('%',#{username},'%')
@@ -323,4 +323,9 @@
 			AND email like CONCAT('%',#{email},'%')
 		</if>
     </select>
+
+	<!-- 查询用户的id -->
+	<select id="selectRankByScore" resultType="java.lang.Integer">
+		SELECT rownum FROM (SELECT user_id,score,(@rownum:=@rownum+1) AS rownum FROM USER,(SELECT (@rownum:=0)) b ORDER BY score DESC, create_date DESC) c WHERE user_id=#{uid};
+	</select>
 </mapper>

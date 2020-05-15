@@ -322,4 +322,15 @@ public class UserServiceImpl implements UserService {
         deleteUserById(user.getUserId());
     }
 
+    /**
+     * 用户网站排名
+     * @param id
+     * @return
+     */
+    @Override
+    public int rankTotal(Integer id) {
+        int rank = rootUserDao.selectRankByScore(id);
+        return rank;
+    }
+
 }

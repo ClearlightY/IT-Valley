@@ -76,7 +76,7 @@ public class IndexController extends BaseController {
 	/**
 	 * 首页
 	 * 
-	 * @param model
+	 * @param p
 	 * @return
 	 */
 	@RequestMapping(value = "/", method = RequestMethod.GET, produces = "application/json; charset=utf-8")

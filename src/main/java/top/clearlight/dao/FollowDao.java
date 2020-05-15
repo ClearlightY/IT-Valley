@@ -88,4 +88,11 @@ public interface FollowDao {
      * @return
      */
     int countTopic(@Param("uid") Integer uid);
+
+    /**
+     * 查询我关注的用户的信息
+     * @param uid
+     * @return
+     */
+    List<User> selectByUid(@Param("uid") Integer uid);
 }

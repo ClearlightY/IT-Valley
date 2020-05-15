@@ -35,7 +35,7 @@ public interface UserService {
 	
 	/**
 	 * 通过昵称和密码查找用户
-	 * @param UserName
+	 * @param userName
 	 * @param password
 	 * @return
 	 */
@@ -141,4 +141,9 @@ public interface UserService {
 	 * @param id
 	 */
 	void deleteAdmin(Integer id);
+
+	/**
+	 * 查询用户在网站的排名
+	 */
+	int rankTotal(Integer id);
 }

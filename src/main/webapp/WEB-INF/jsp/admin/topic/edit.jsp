@@ -8,19 +8,19 @@
 <div class="content-wrapper" style="padding: 50px 0 40px;">
 	<section class="content-header">
     <h1>
-      话题
+      文章
       <small>编辑</small>
     </h1>
     <ol class="breadcrumb">
       <li><a href="/admin/index"><i class="fa fa-dashboard"></i> 首页</a></li>
-      <li><a href="/admin/topic/list">话题</a></li>
+      <li><a href="/admin/topic/list">文章</a></li>
       <li class="active">编辑</li>
     </ol>
   </section>
   <section class="content">
     <div class="box box-info">
       <div class="box-header with-border">
-        <h3 class="box-title">话题编辑</h3>
+        <h3 class="box-title">文章编辑</h3>
       </div>
       <!-- /.box-header -->
       <div class="box-body">
@@ -34,7 +34,7 @@
             	<label for="content">内容</label>
             	<div id="editor" style="margin-bottom: 10px;"></div>
           	</div>
-            <c:if test="${fn:length(nodes) > 0}">
+            <!-- <c:if test="${fn:length(nodes) > 0}">
          	<div class="form-group">
           		<label for="node">节点</label>
           		<select id="node" class="form-control" name="node">
@@ -50,8 +50,8 @@
              		</c:forEach>
           		</select>
         	</div>
-        	</c:if>
-            <button type="submit" class="btn btn-primary btn-sm">更新话题</button>
+        	</c:if> -->
+            <button type="submit" class="btn btn-primary btn-sm">更新文章</button>
           </div>
         </form>
       </div>
@@ -81,18 +81,15 @@
   	    	  'undo',  // 撤销
   	    	  'redo'  // 重复
   	        ];
-  	    editor.create();
-  	    editor.txt.html('${fn:replace(topic.content,vEnter,'')}');
+				editor.create();
+  	    editor.txt.html("${fn:replace(content,vEnter,'')}");
   	  $("#from").submit(function() {
-  		if (confirm("确定编辑此话题吗？")) {
+  		if (confirm("确定编辑此文章吗？")) {
   			var title = $("#title").val();
   			var contentHtml = editor.txt.html();
-  			var nodeTitle = $("#node option:selected").val();
+  			// var nodeTitle = $("#node option:selected").val();
   			if (!title || title.length > 120) {
   				alert('请输入标题，且最大长度在120个字符以内');
-  				return false;
-  			} else if (!nodeTitle) {
-  				alert('请选择一个节点');
   				return false;
   			} else {
   				$.ajax({
@@ -105,7 +102,7 @@
   						id: ${topic.topicId},
   						title: title,
   						content: contentHtml,
-  						nodeTitle: nodeTitle
+  						nodeTitle: 'Java'
   					},
   					success: function(data) {
   						if (data.success != null && data.success == true) {
