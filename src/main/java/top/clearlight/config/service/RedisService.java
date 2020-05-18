@@ -154,8 +154,9 @@ public class RedisService implements BaseService<JedisPool> {
 	 */
 	public void setString(String key, String value) {
 		Jedis jedis = getJedis();
-		if (StringUtils.isEmpty(key) || StringUtils.isEmpty(value) || jedis == null)
+		if (StringUtils.isEmpty(key) || StringUtils.isEmpty(value) || jedis == null) {
 			return;
+		}
 		jedis.set(key, value);
 		jedis.close();
 	}
@@ -167,8 +168,9 @@ public class RedisService implements BaseService<JedisPool> {
 	 */
 	public void delString(String key) {
 		Jedis jedis = getJedis();
-		if (StringUtils.isEmpty(key) || jedis == null)
+		if (StringUtils.isEmpty(key) || jedis == null) {
 			return;
+		}
 		jedis.del(key);
 		jedis.close();
 

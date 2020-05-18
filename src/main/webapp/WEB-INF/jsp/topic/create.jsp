@@ -36,26 +36,6 @@
                     href="javascript:cancelReply();">取消</a></p>
                 <div id="editor" style="margin-bottom: 10px;"></div>
               </div>
-              <%-- <div class="form-group">
-                <label for="tab">板块</label>
-                <select id="tab" class="form-control" name="tab" onchange="getNode()">
-                 <c:forEach var="item" items="${tabList}" varStatus="status">
-                 <c:if test="${item.tabName != 'all' && item.tabName != 'member'}">
-                 <option value="${item.tabName}">${item.tabDesc}</option>
-               </c:if>
-             </c:forEach>
-           </select>
-         </div> --%>
-              <%--        <c:if test="${fn:length(node) == 0}">
-         	<div class="form-group">
-          <label for="node">节点</label>
-          <select id="node" class="form-control" name="node">
-          	<c:forEach var="item" items="${nodeList}" varStatus="status">
-                 <option value="${item.nodeTitle}">${item.nodeTitle}</option>
-             </c:forEach>
-          </select>
-        </div>
-        </c:if>--%>
               <div class="form-group">
                 <div class="form-group">
                   <label for="title">标签</label>
@@ -87,7 +67,6 @@
   <script src="/resources/js/jquery.js"></script>
   <script src="/resources/js/bootstrap.min.js"></script>
   <script src="/resources/wangEditor/wangEditor.min.js"></script>
-  <!-- <script src="/resources/js/topic/node.js"></script> -->
   <script type="text/javascript">
     $(function () {
       var E = window.wangEditor;
@@ -110,6 +89,7 @@
         'undo', // 撤销
         'redo' // 重复
       ];
+      // 创建富文本编辑器
       editor.create();
 
       function commentThis(username, commentId) {
@@ -129,29 +109,12 @@
         var title = $("#title").val();
         // html 格式的内容
         var contentHtml = editor.txt.html();
-        // 普通格式的内容
-        var contentText = editor.txt.text();
-
-        // var tab = $("#tab option:selected").val();
-        // var nodeCode = $("#node option:selected").val();
-        // alert(contentHtml);
-
-        var node = "${node}";
-
-        // 节点
-        var nodeTitle = node ? node : $("#node option:selected").val();
         // 标签
         var tag = $("#tag").val();
-        // var avatar = $("#editor").find("img:first").attr("src");
         if (!title || title.length > 120) {
           alert('请输入标题，且最大长度在120个字符以内');
           return false;
-        }
-        /* else if(!nodeTitle){
-          alert('请选择一个节点');
-          return false;
-        }*/
-        else {
+        } else {
           $.ajax({
             url: '/topic/save',
             type: 'post',
@@ -161,13 +124,9 @@
             data: {
               title: title,
               content: contentHtml,
-              //tab:tab,
-              // nodeCode:nodeCode,
-              // nodeTitle: nodeTitle,
               tag: tag
             },
             success: function (data) {
-              //console.log(JSON.stringify(data));
               if (data.success != null && data.success == true) {
                 window.location.href = "/topic/" + data.data.topic.topicId;
               } else {

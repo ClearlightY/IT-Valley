@@ -67,10 +67,15 @@ public class FollowController extends BaseController {
     @ResponseBody
     private Result<Integer> save(Integer fid, HttpServletRequest request) {
         Follow follow = new Follow();
+        // 登录用户的ID
         follow.setUid(getUser(request).getUserId());
+        // 关注用户的ID
         follow.setFid(fid);
+        // 关注的日期
         follow.setCreateDate(new Date());
+        // 将关注的用户存到关注表中
         int insert = followService.insert(follow);
+        // 添加成功的话,返回成功的标志
         if (insert == 1) {
             String info = "关注成功";
             return new Result<Integer>(true, info);

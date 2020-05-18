@@ -71,8 +71,6 @@
                                             <div class="fr">
                                                 <button class="btn btn-follow" onclick="save()" id="follow">加入特别关注
                                                 </button>
-                                                <!-- <div class="sep10"></div>
-                                <button class="btn btn-warning">Block</button> -->
                                             </div>
                                         </c:if>
                                         <h1 title="${user.userId}" id="user_id" class="user_id">${user.userName}</h1>

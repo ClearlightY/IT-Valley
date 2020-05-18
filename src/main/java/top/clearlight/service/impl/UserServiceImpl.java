@@ -207,6 +207,7 @@ public class UserServiceImpl implements UserService {
         user.setCreateDate(new Date());
         user.setUpdateDate(null);
         user.setIsBlock(false);
+        // 作为Redis的key值,其中getUUID()获取的是唯一不重复的值.
         user.setThirdAccessToken(StringUtil.getUUID());
         user.setStatusCd("1000");
         user.setUserType("2");

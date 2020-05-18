@@ -75,7 +75,7 @@ public class IndexController extends BaseController {
 
 	/**
 	 * 首页
-	 * 
+	 *
 	 * @param p
 	 * @return
 	 */
@@ -132,7 +132,7 @@ public class IndexController extends BaseController {
 
 	/**
 	 * 注册接口
-	 * 
+	 *
 	 * @param username
 	 * @param password
 	 * @param email
@@ -153,7 +153,7 @@ public class IndexController extends BaseController {
 		// 调用业务逻辑层查找邮箱是否存在
 		user = userService.findByEmail(email);
 		ApiAssert.isNull(user, "邮箱已存在");
-		// 满足所有条件后则创建新的用户
+		// 满足所有条件后则创建新的用户,存储到数据库中
 		UserExecution save = userService.createUser(username, password, email);
 		return new Result<UserExecution>(true, save);
 	}
@@ -168,7 +168,7 @@ public class IndexController extends BaseController {
 
 	/**
 	 * 登录接口
-	 * 
+	 *
 	 * @param username
 	 * @param password
 	 * @param request
@@ -188,9 +188,9 @@ public class IndexController extends BaseController {
 			matches(password, user.getPassword()), "密码不正确");
 		// 设置cookie
 		CookieAndSessionUtil.setCookie(siteConfig.getCookieConfig().getName(),
-				Base64Util.encode(user.getThirdAccessToken()), 
+				Base64Util.encode(user.getThirdAccessToken()),
 				siteConfig.getCookieConfig().getMaxAge(),
-				siteConfig.getCookieConfig().getPath(), 
+				siteConfig.getCookieConfig().getPath(),
 				siteConfig.getCookieConfig().isHttpOnly(), response);
 		// 设置session
 		CookieAndSessionUtil.setSession(request, "user", user);
@@ -200,7 +200,7 @@ public class IndexController extends BaseController {
 
 	/**
 	 * 退出
-	 * 
+	 *
 	 * @param request
 	 * @param response
 	 * @return
@@ -216,7 +216,7 @@ public class IndexController extends BaseController {
 
 	/**
 	 * 标签页
-	 * 
+	 *
 	 * @param request
 	 * @param p
 	 * @return
@@ -246,7 +246,7 @@ public class IndexController extends BaseController {
 
 	/**
 	 * 搜索
-	 * 
+	 *
 	 * @param request
 	 * @return
 	 */
@@ -266,7 +266,7 @@ public class IndexController extends BaseController {
 
 	/**
 	 * Top100积分榜
-	 * 
+	 *
 	 * @return
 	 */
 	@RequestMapping(value = "/top100")
@@ -276,7 +276,7 @@ public class IndexController extends BaseController {
 
 	/**
 	 * 关于
-	 * 
+	 *
 	 * @return
 	 */
 	@RequestMapping(value = "/about")
@@ -286,7 +286,7 @@ public class IndexController extends BaseController {
 
 	/**
 	 * faq
-	 * 
+	 *
 	 * @return
 	 */
 	@RequestMapping(value = "/faq")
@@ -296,7 +296,7 @@ public class IndexController extends BaseController {
 
 	/**
 	 * api
-	 * 
+	 *
 	 * @return
 	 */
 	@RequestMapping(value = "/api")
@@ -306,7 +306,7 @@ public class IndexController extends BaseController {
 
 	/**
 	 * mission
-	 * 
+	 *
 	 * @return
 	 */
 	@RequestMapping(value = "/mission")
@@ -316,7 +316,7 @@ public class IndexController extends BaseController {
 
 	/**
 	 * advertise
-	 * 
+	 *
 	 * @return
 	 */
 	@RequestMapping(value = "/advertise")
@@ -326,7 +326,7 @@ public class IndexController extends BaseController {
 
 	/**
 	 * 反馈建议
-	 * 
+	 *
 	 * @return
 	 */
 	@RequestMapping(value = "/feedback")
@@ -357,7 +357,7 @@ public class IndexController extends BaseController {
 
 	/**
 	 * 这是测试代码，与项目无关 excel
-	 * 
+	 *
 	 * @return
 	 */
 	@RequestMapping(value = "/excel")
@@ -373,7 +373,7 @@ public class IndexController extends BaseController {
 
 	/**
 	 * 这是测试代码，与项目无关
-	 * 
+	 *
 	 * @param response
 	 * @throws Exception
 	 */

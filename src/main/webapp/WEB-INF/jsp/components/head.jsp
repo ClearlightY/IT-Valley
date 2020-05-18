@@ -87,7 +87,7 @@
 	<div class="container" style="padding: 0 25px;">
 		<form class="hidden-lg hidden-md" style="margin: 0 -10px;" role="search" action="/search" method="get">
 			<div class="form-group has-feedback" style="margin-bottom: 10px;">
-				<input type="text" class="form-control" name="q" value="" placeholder="回车搜索">
+				<input type="text" class="form-control" name="s" value="" placeholder="回车搜索">
 				<!-- <span class="glyphicon glyphicon-search form-control-feedback" aria-hidden="true"></span> -->
 			</div>
 		</form>
