@@ -7,7 +7,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <title>Roothub后台管理</title>
+  <title>IT Valley 后台管理</title>
   <link rel="stylesheet" href="/resources/layui/css/layui.css">
 </head>
 <body class="layui-layout-body">
@@ -19,7 +19,7 @@
   
   <div class="layui-body">
     <!-- 内容主体区域 -->
-    <div style="padding: 15px;">aaa内容主体区域</div>
+    <div style="padding: 15px;">内容主体区域</div>
   </div>
   <!-- 底部 -->
   <jsp:include page="../../admin/layout/footer.jsp"></jsp:include>

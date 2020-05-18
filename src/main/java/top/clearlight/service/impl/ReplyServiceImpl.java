@@ -25,10 +25,6 @@ import top.clearlight.service.TopicService;
 
 /**
  * 评论业务逻辑层
- * @author sen
- * 2018年5月25日
- * 下午8:54:27
- * TODO
  */
 @Service
 public class ReplyServiceImpl implements ReplyService{

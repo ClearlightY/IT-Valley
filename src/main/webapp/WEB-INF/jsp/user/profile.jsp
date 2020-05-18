@@ -39,7 +39,7 @@
             </div>
             <div class="form-group">
               <label for="email">邮箱</label>
-              <input type="text" class="form-control" id="email" name="email" value="${user.email}">
+              <input type="text" disabled="" class="form-control" id="email" name="email" value="${user.email}">
             </div>
             <div class="form-group">
               <label for="url">个人网站</label>

@@ -31,14 +31,14 @@
             <input type="text" readonly id="endDate" name="endDate" value="${endDate}"
                    class="form-control" placeholder="结束时间">
             <input type="text" name="author" value="${author}" class="form-control" placeholder="用户名">
-            <input type="text" name="topic" value="${topic}" class="form-control" placeholder="话题">
+            <input type="text" name="topic" value="${topic}" class="form-control" placeholder="文章">
             <button type="submit" class="btn btn-primary btn-sm">搜索</button>
           </div>
         </form>
         <table class="table table-bordered">
           <thead>
           <tr>
-            <th>#</th>
+            <th>ID</th>
             <th>评论</th>
             <th>话题</th>
             <th>用户</th>

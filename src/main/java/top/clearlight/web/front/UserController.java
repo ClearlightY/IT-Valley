@@ -225,11 +225,11 @@ public class UserController extends BaseController {
         //String cookie = CookieAndSessionUtil.getCookie(request, "user");
         if (user != null) {
             //user = rootUserService.findByName(Base64Util.decode(cookie));
-            if (email.trim().isEmpty()) {
+            /*if (email.trim().isEmpty()) {
                 user.setEmail("");
             } else {
                 user.setEmail(email.trim());
-            }
+            }*/
             url = url.replace("http://", "");
             url = url.replace("https://", "");
             thirdId = thirdId.replace("http://", "");
@@ -240,7 +240,7 @@ public class UserController extends BaseController {
                 user.setUrl(url.trim());
             }
             if (thirdId.trim().isEmpty()) {
-                user.setThirdId(" ");
+                user.setThirdId("");
             } else {
                 user.setThirdId(thirdId.trim());
             }

@@ -21,11 +21,6 @@ import top.clearlight.entity.User;
 import top.clearlight.service.UserService;
 import top.clearlight.util.StringUtil;
 
-/**
- * <p></p>
- * @author: miansen.wang
- * @date: 2019-05-01
- */
 @Controller
 @RequestMapping("/admin/user")
 public class UserAdminController {
@@ -44,8 +39,12 @@ public class UserAdminController {
 	@RequiresPermissions("user:list")
 	@RequestMapping(value = "/list",method = RequestMethod.GET)
 	public String list(String username, String email, @RequestParam(value = "p",defaultValue = "1") Integer p, Model model) {
-		if(StringUtils.isEmpty(username)) username = null;
-		if(StringUtils.isEmpty(email)) email = null;
+		if(StringUtils.isEmpty(username)) {
+			username = null;
+		}
+		if(StringUtils.isEmpty(email)) {
+			email = null;
+		}
 		model.addAttribute("username", username);
 		model.addAttribute("email", email);
 		model.addAttribute("p", p);
@@ -69,7 +68,6 @@ public class UserAdminController {
 	/**
 	 * 编辑用户接口
 	 * @param user
-	 * @param request
 	 * @return
 	 */
 	@RequiresPermissions("user:edit")
@@ -110,7 +108,7 @@ public class UserAdminController {
 	 */
 	@InitBinder
     public void initBinder(WebDataBinder binder, WebRequest request) {
-        // 转换日期 注意这里的转化要和传进来的字符串的格式一直 如2015-9-9 就应该为yyyy-MM-dd
+        // 转换日期 注意这里的转化要和传进来的字符串的格式一直 如2020-9-9 就应该为yyyy-MM-dd
         DateFormat dateFormat=new SimpleDateFormat("yyyy-MM-dd");
         // CustomDateEditor为自定义日期编辑器
         binder.registerCustomEditor(Date.class, new CustomDateEditor(dateFormat, true));

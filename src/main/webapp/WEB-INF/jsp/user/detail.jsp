@@ -41,6 +41,10 @@
         .user_detail {
             margin-top: 13px;
         }
+
+        .newline{
+            margin-top: 14px;
+        }
     </style>
 </head>
 
@@ -77,20 +81,24 @@
                                             <div class="sep5"></div>
                                         </span>
                                         <div class="user_detail">
-                                            <span class="links-of-author-item_1">文章 <span
-                                                    style="color: black">${countTopic}</span></span>
-                                            <span class="links-of-author-item_1">收藏
-                                                <span style="color: black">${countCollect}</span></span>
-                                            <span class="links-of-author-item_1">评论 <span
-                                                    style="color: black">${countReply}</span></span>
-                                            <span class="links-of-author-item_1">获赞
-                                                <span style="color: black">${countTopicClick}</span></span>
-                                            <span class="links-of-author-item_1">积分 <span
-                                                    style="color: black">${countScore}</span></span>
-                                            <span class="links-of-author-item_1">访问 <span
-                                                    style="color: black">${countVisit}</span></span>
-                                            <span class="links-of-author-item_1">排名 <span
-                                                    style="color: black">${rankTotal}</span></span>
+                                            <div>
+                                                <span class="links-of-author-item_1">文章 <span
+                                                        style="color: black">${countTopic}</span></span>
+                                                <span class="links-of-author-item_1">收藏
+                                                    <span style="color: black">${countCollect}</span></span>
+                                                <span class="links-of-author-item_1">评论 <span
+                                                        style="color: black">${countReply}</span></span>
+                                                <span class="links-of-author-item_1">获赞
+                                                    <span style="color: black">${countTopicClick}</span></span>
+                                            </div>
+                                            <div class="newline">
+                                                <span class="links-of-author-item_1">积分 <span
+                                                        style="color: black">${countScore}</span></span>
+                                                <span class="links-of-author-item_1">访问 <span
+                                                        style="color: black">${countVisit}</span></span>
+                                                <span class="links-of-author-item_1">排名 <span
+                                                        style="color: black">${rankTotal}</span></span>
+                                            </div>
                                         </div>
                                         <div class="person_url">
                                             <c:if test="${user.url !=null && user.url != ''}">

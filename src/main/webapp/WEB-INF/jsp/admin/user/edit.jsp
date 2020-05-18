@@ -44,7 +44,7 @@
             			<label>积分</label>
             			<input type="number" name="score" id ="score" value="${user.score}" class="form-control">
           			</div>
-          			<div class="form-group">
+          			<!-- <div class="form-group">
             			<label>性别</label>
                 		<select name="userSex" id="userSex" class="form-control">                 
              			<c:choose>
@@ -62,11 +62,11 @@
                 			</c:otherwise>
                 		</c:choose>
           				</select>
-          			</div>
-          			<div class="form-group">
+          			</div> -->
+          			<!-- <div class="form-group">
             			<label>地址</label>
             			<input type="text" name="userAddr" id ="userAddr" value="${user.userAddr}" class="form-control">
-          			</div>
+          			</div> -->
           			<div class="form-group">
             			<label>个人主页</label>
             			<input type="text" name="url" id ="url" value="${user.url}" class="form-control">
@@ -79,7 +79,7 @@
             			<label>Github</label>
             			<input type="text" name="thirdId" id ="thirdId" value="${user.thirdId}" class="form-control">
           			</div>
-          			<div class="form-group">
+          			<!-- <div class="form-group">
             			<label>Token</label>
             			<div class="input-group">
             				<input type="text" name="thirdAccessToken" id ="thirdAccessToken" value="${user.thirdAccessToken}" class="form-control">
@@ -104,12 +104,12 @@
                   				</script>
                 			</span>
                			</div>
-          			</div>
+          			</div> -->
           			<div class="form-group">
             			<label>创建时间</label>
             			<input type="date" name="createDate" id ="createDate" value="<fmt:formatDate value='${user.createDate}' pattern='yyyy-MM-dd'/>" class="form-control">
           			</div>
-          			<div class="form-group">
+          			<!-- <div class="form-group">
             			<label>有新消息接收邮件通知</label>
                 		<select name="receiveMsg" id="receiveMsg" class="form-control">                 
              			<c:choose>
@@ -127,7 +127,7 @@
                 			</c:otherwise>
                 		</c:choose>
           				</select>
-          			</div>
+          			</div> -->
           			<div class="form-group">
                 		<label>头像</label>
                 		<p>

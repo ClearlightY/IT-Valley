@@ -61,8 +61,6 @@
                                             <c:if test="${item.good}">
                                                 <span class="label label-success">精华</span> <span>•</span>
                                             </c:if>
-                                            <%--			    <span><a href="/n/${item.nodeTitle}" class="node">${item.nodeTitle}</a></span>--%>
-                                            <%--			    <span>•</span>--%>
                                             <a href="/user/${item.author}">${item.author}</a>
                                             <c:if test="${item.viewCount > 0}">
                                                 <span class="hidden-sm hidden-xs">•</span>
@@ -79,20 +77,6 @@
                                             <span>•</span>
                                             <span>
                                                 <fmt:formatDate type="date" value="${item.createDate}" /></span>
-                                            <%-- <span>${baseEntity.formatDate(item.createDate)}</span> --%>
-                                            <%-- <span class="formate-date">${item.createDate}</span> --%>
-
-                                            <!-- 最后回复用户 -->
-                                            <%-- <c:if test="${fn:length(item.lastReplyAuthor) > 0}">
-                                            <span>•</span>
-                                            <span>最后回复来自 <a href="/user/${item.lastReplyAuthor}">${item.lastReplyAuthor}</a></span>
-                                            </c:if> --%>
-
-                                            <!-- 标签 -->
-                                            <%-- <c:if test="${item.tag != null}">
-                                            <span>•</span>
-                                            <a href="/tag/${item.tag}"><span class="label label-success">${item.tag}</span></a>
-                                            </c:if> --%>
                                         </p>
                                     </div>
                                 </div>
@@ -102,7 +86,7 @@
                             </div>
                         </c:forEach>
                     </div>
-                    <div class="panel-footer" id="paginate"></div>
+                    <div class="box-footer panel-footer" id="paginate"></div>
                 </div>
             </div>
             <div class="col-md-3 hidden-sm hidden-xs">
@@ -233,14 +217,8 @@
     <script type="text/javascript">
         //var tab = "${tab}";//板块
         var tab = "${tab}"; //父板块
-        //var url = "/?tab="+tab+"&ptab="+ptab+"&"
-        //$(".pagination2").pagination("${page.pageNumber}","${page.totalPage}",10);
-        var count = $ {
-            page.totalRow
-        }; //数据总量
-        var limit = $ {
-            page.pageSize
-        }; //每页显示的条数
+        var count = ${page.totalRow}; //数据总量
+        var limit = ${page.pageSize}; //每页显示的条数
         var url = "?tab=" + tab + "&p="; //url
         function page() {
             var page = location.search.match(/p=(\d+)/);
@@ -248,9 +226,9 @@
         }
 
         var p = page(); //当前页数
-        //console.log("p:"+p);
-        //console.log(count);
-        //console.log(url);
+        console.log("p:" + p);
+        console.log(count);
+        console.log(url);
         paginate(count, limit, p, url);
 
 

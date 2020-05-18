@@ -34,7 +34,7 @@
         <table class="table table-bordered">
           <thead>
           <tr>
-            <th>#</th>
+            <th>ID</th>
             <th>用户名</th>
             <th>邮箱</th>
             <th>积分</th>

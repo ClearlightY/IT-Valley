@@ -28,9 +28,43 @@
       }
     }
 
-    body {
+    /* body {
       height: 100%;
       width: 100%;
+    } */
+
+    body {
+      background-image: url(https://s1.ax1x.com/2020/05/15/Ysddun.gif
+) !important;
+      background-repeat: repeat !important;
+      background-color: #0a0a0a !important
+    }
+
+    body header {
+      background: url("images/bg-title.gif?v4") no-repeat center;
+      background-size: 1920px auto
+    }
+
+    body header .container {
+      height: 100px
+    }
+
+    body div.title-box .title-blog a {
+      color: #e2e2e2 !important
+    }
+
+    body div.title-box .title-blog a:hover {
+      color: #fff !important
+    }
+
+    body div.title-box .description {
+      color: #c5c5c5 !important
+    }
+
+    .login-box,
+    .register-box {
+      width: 360px;
+      margin: 12.5% auto;
     }
   </style>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
@@ -56,11 +90,11 @@
   </script>
 </head>
 <!-- https://s1.ax1x.com/2020/03/16/8JiCcR.jpg -->
-<body class="hold-transition login-page"
-  style="background-image: url(/resources/images/admin_login.jpg);background-repeat: repeat-x;background-attachment: fixed;background-size: cover;">
+
+<body class="hold-transition login-page">
   <div class="login-box">
     <div class="login-logo">
-      <a href="javascript:;"><b>IT Valley</b>管理平台</a>
+      <a href="javascript:;" style="color: #fff"><b>IT Valley</b>&nbsp;管理平台</a>
     </div>
     <div class="login-box-body">
       <p class="login-box-msg">IT Valley 管理平台登录</p>

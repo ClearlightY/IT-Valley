@@ -99,6 +99,15 @@ public class IndexController extends BaseController {
 		int countAllTopic = topicService.countAllTopic(null);
 		// 所有评论的数量
 		int countAllReply = replyService.countAll();
+
+		// 查看所有文章
+		List<Topic> topicList = page.getList();
+		for (Topic topic : topicList) {
+			System.out.println("文章ID:" + topic.getTopicId());
+		}
+		System.out.println(page.getTotalRow());
+		System.out.println(page.getPageSize());
+
 		request.setAttribute("page", page);
 		request.setAttribute("findHot", findHot);
 		request.setAttribute("findTodayNoReply", findTodayNoReply);
