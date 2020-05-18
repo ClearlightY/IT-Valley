@@ -6,10 +6,6 @@ import top.clearlight.entity.Tab;
 
 /**
  * 父板块数据接口
- * @author sen
- * 2018年7月15日
- * 下午8:57:48
- * TODO
  */
 public interface TabDao {
 

@@ -18,10 +18,6 @@ import top.clearlight.service.AdminUserRoleRelService;
 import top.clearlight.service.RolePermissionRelService;
 import top.clearlight.service.RoleService;
 
-/**
- * @author miansen.wang
- * @date 2019年2月27日 下午9:11:21
- */
 @Service
 public class RoleServiceImpl implements RoleService {
 	

@@ -5,10 +5,6 @@ import java.util.Date;
 /**
  * 评论实体
  * Table: root_reply
- * @author sen
- * 2018年5月5日
- * 下午9:30:23
- * TODO
  */
 public class Reply {
 

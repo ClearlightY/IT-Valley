@@ -18,11 +18,6 @@ import top.clearlight.service.AbstractUploadConfig;
 import top.clearlight.util.JsonUtil;
 import top.clearlight.util.RedisConstants;
 
-/**
- * <p></p>
- * @author: miansen.wang
- * @date: 2019-04-02
- */
 @Service
 public class UploadConfig extends AbstractUploadConfig {
 

@@ -16,11 +16,6 @@ import top.clearlight.entity.Node;
 import top.clearlight.exception.ApiAssert;
 import top.clearlight.service.NodeService;
 
-/**
- * <p></p>
- * @author: miansen.wang
- * @date: 2019-04-03
- */
 @Controller
 @RequestMapping("/admin/node")
 public class NodeAdminController {

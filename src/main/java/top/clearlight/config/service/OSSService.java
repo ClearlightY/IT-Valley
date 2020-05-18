@@ -15,11 +15,6 @@ import top.clearlight.config.properties.StorageProperties;
 import top.clearlight.exception.StorageException;
 import top.clearlight.util.FileNameUtil;
 
-/**
- * <p></p>
- * @author: miansen.wang
- * @date: 2019-04-13
- */
 @Component
 public class OSSService implements BaseService<OSSClient>{
 

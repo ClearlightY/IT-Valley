@@ -2,10 +2,6 @@ package top.clearlight.entity;
 
 /**
  * Top100积分榜
- * @author sen
- * 2018年9月10日
- * 上午10:32:11
- * TODO
  */
 public class Top100 {
 

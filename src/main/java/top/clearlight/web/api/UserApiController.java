@@ -29,13 +29,6 @@ import top.clearlight.service.UserService;
 import top.clearlight.service.VisitService;
 import top.clearlight.web.front.BaseController;
 
-/**
- * 
- * @author sen
- * 2018年7月21日
- * 下午10:58:12
- * TODO
- */
 @RestController
 public class UserApiController extends BaseController {
 

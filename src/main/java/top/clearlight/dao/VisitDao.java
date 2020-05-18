@@ -6,13 +6,6 @@ import org.apache.ibatis.annotations.Param;
 import top.clearlight.entity.User;
 import top.clearlight.entity.Visit;
 
-/**
- * 
- * @author sen
- * 2018年8月4日
- * 上午11:33:04
- * TODO
- */
 public interface VisitDao {
 
 	/**

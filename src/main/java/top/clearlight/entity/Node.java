@@ -2,10 +2,6 @@ package top.clearlight.entity;
 
 import java.util.Date;
 
-/**
- * @author miansen.wang
- * @date 2018年11月3日 上午11:38:30
- */
 public class Node {
 
 	private Integer nodeId;

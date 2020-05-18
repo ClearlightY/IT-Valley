@@ -6,10 +6,6 @@ import java.util.List;
 import org.apache.ibatis.annotations.Param;
 import top.clearlight.entity.Permission;
 
-/**
- * @author miansen.wang
- * @date 2019年2月26日 下午20:41:45
- */
 public interface PermissionDao {
 
 	Permission selectById(@Param("id") Integer id);

@@ -2,10 +2,6 @@ package top.clearlight.enums;
 
 /**
  * 修改操作数据字典
- * @author sen
- * 2018年5月12日
- * 上午11:36:31
- * TODO
  */
 public enum UpdateEnum {
 

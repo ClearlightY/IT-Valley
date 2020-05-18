@@ -6,10 +6,6 @@ import top.clearlight.enums.UpdateEnum;
 
 /**
  * 存储操作板块的结果
- * @author sen
- * 2018年5月9日
- * 下午6:05:31
- * TODO
  */
 public class SectionExecution {
 

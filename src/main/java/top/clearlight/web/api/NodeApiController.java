@@ -6,10 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 import top.clearlight.service.NodeService;
 
 */
-/**
- * @author miansen.wang
- * @date 2019年1月4日 下午9:16:38
- *//*
+/*
 
 @RestController
 public class NodeApiController {

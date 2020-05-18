@@ -5,10 +5,6 @@ import java.util.Date;
 /**
  * 回复实体
  * Table: root_notice
- * @author sen
- * 2018年5月5日
- * 下午9:39:24
- * TODO
  */
 public class Notice {
 

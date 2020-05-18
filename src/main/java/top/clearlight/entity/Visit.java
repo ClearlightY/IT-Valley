@@ -4,10 +4,6 @@ import java.util.Date;
 
 /**
  * 访问记录
- * @author sen
- * 2018年8月4日
- * 上午11:28:01
- * TODO
  */
 public class Visit {
 

@@ -176,26 +176,13 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserExecution save(User user) {
         try {
-            if (user.getUserName() == null && user.getUserName().equals("")) {
-                throw new OperationRepeaException("用户名不能为空");
-            }
-            if (user.getPassword() == null && user.getPassword().equals("")) {
-                throw new OperationRepeaException("密码不能为空");
-            }
-            User userName = rootUserDao.selectByUserName(user.getUserName());
-            if (userName != null) {
-                throw new OperationRepeaException("昵称已存在");
+            int insertUser = rootUserDao.insertUser(user);
+            if (insertUser <= 0) {
+                throw new OperationFailedException("注册失败");
             } else {
-                int insertUser = rootUserDao.insertUser(user);
                 User rootUser = rootUserDao.selectByUserName(user.getUserName());
-                if (insertUser <= 0) {
-                    throw new OperationFailedException("注册失败");
-                } else {
-                    // ValueOperations<String, String> opsForValue = stringRedisTemplate.opsForValue();
-                    // opsForValue.set(rootUser.getThirdAccessToken(), JsonUtil.objectToJson(rootUser));
-                    redisService.setString(rootUser.getThirdAccessToken(), JsonUtil.objectToJson(rootUser));
-                    return new UserExecution(user.getUserName(), InsertUserEnum.SUCCESS, rootUser);
-                }
+                redisService.setString(rootUser.getThirdAccessToken(), JsonUtil.objectToJson(rootUser));
+                return new UserExecution(user.getUserName(), InsertUserEnum.SUCCESS, rootUser);
             }
         } catch (OperationRepeaException e1) {
             throw e1;
@@ -324,6 +311,7 @@ public class UserServiceImpl implements UserService {
 
     /**
      * 用户网站排名
+     *
      * @param id
      * @return
      */

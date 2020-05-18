@@ -6,11 +6,6 @@ import java.util.List;
 import org.apache.ibatis.annotations.Param;
 import top.clearlight.entity.RolePermissionRel;
 
-/**
- * <p></p>
- * @author: miansen.wang
- * @date: 2019-03-01
- */
 public interface RolePermissionRelDao {
 
 	List<RolePermissionRel> selectAllByRoleId(@Param("roleId") Integer roleId);

@@ -2,10 +2,6 @@ package top.clearlight.enums;
 
 /**
  * 发布话题的数据字典
- * @author sen
- * 2018年5月7日
- * 下午11:57:22
- * TODO
  */
 public enum InsertTopicEnum {
 

@@ -21,10 +21,6 @@ import top.clearlight.service.AdminUserService;
 import top.clearlight.service.RoleService;
 import top.clearlight.util.SimpleHashUtil;
 
-/**
- * @author miansen.wang
- * @date 2019年2月27日 下午2:51:52
- */
 @Service
 public class AdminUserServiceImpl implements AdminUserService {
 

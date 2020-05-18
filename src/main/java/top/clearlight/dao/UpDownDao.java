@@ -3,13 +3,6 @@ package top.clearlight.dao;
 import org.apache.ibatis.annotations.Param;
 import top.clearlight.entity.UpDown;
 
-/**
- * 
- * @author sen
- * 2018年8月11日
- * 上午10:34:54
- * TODO
- */
 public interface UpDownDao {
 
 	/**

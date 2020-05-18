@@ -7,11 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import top.clearlight.entity.SystemConfig;
 import top.clearlight.service.SystemConfigService;
 
-/**
- * <p></p>
- * @author: miansen.wang
- * @date: 2019-03-15
- */
 //@Component
 public class UploadConfig {
 

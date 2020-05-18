@@ -16,11 +16,6 @@ import top.clearlight.exception.ApiAssert;
 import top.clearlight.service.PermissionService;
 import top.clearlight.service.RoleService;
 
-/**
- * <p></p>
- * @author: miansen.wang
- * @date: 2019-03-04
- */
 @Controller
 @RequestMapping("/admin/role")
 public class RoleAdminController {

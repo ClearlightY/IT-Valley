@@ -16,11 +16,6 @@ import top.clearlight.entity.Permission;
 import top.clearlight.exception.ApiAssert;
 import top.clearlight.service.PermissionService;
 
-/**
- * <p></p>
- * @author: miansen.wang
- * @date: 2019-03-05
- */
 @Controller
 @RequestMapping("/admin/permission")
 public class PermissionAdminController {

@@ -22,11 +22,6 @@ import top.clearlight.service.SystemConfigService;
 import top.clearlight.util.JsonUtil;
 import top.clearlight.util.RedisConstants;
 
-/**
- * <p></p>
- * @author: miansen.wang
- * @date: 2019-03-07
- */
 @Service
 public class SystemConfigServiceImpl implements SystemConfigService {
 

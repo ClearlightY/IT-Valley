@@ -2,11 +2,6 @@ package top.clearlight.config;
 
 import java.util.LinkedHashMap;
 
-/**
- * <p></p>
- * @author: miansen.wang
- * @date: 2019-03-01
- */
 public class ShiroConfig {
 
 	/**

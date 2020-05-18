@@ -1,10 +1,5 @@
 package top.clearlight.config.service;
 
-/**
- * <p></p>
- * @author: miansen.wang
- * @date: 2019-03-10
- */
 public interface BaseService<T> {
 
 	/**

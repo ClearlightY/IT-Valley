@@ -10,8 +10,6 @@ import top.clearlight.web.front.BaseController;
 
 /**
  * 全局拦截器
- * @author miansen.wang
- * @date 2018年10月31日 下午7:55:16
  */
 public class GlobalInterceptorHandler implements HandlerInterceptor{
 	

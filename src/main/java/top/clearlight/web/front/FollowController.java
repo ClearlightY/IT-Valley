@@ -22,12 +22,6 @@ import top.clearlight.service.FollowService;
 import top.clearlight.service.NoticeService;
 import top.clearlight.service.TopicService;
 
-/**
- * @author sen
- * 2018年7月3日
- * 上午10:15:55
- * TODO
- */
 @Controller
 public class FollowController extends BaseController {
 

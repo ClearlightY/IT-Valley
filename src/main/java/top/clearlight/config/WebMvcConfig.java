@@ -9,11 +9,6 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
 import top.clearlight.service.SystemConfigService;
 
-/**
- * <p></p>
- * @author: miansen.wang
- * @date: 2019-03-12
- */
 @Configuration
 public class WebMvcConfig extends WebMvcConfigurationSupport {
 

@@ -2,10 +2,6 @@ package top.clearlight.entity;
 
 /**
  * 标签实体
- * @author sen
- * 2018年6月3日
- * 下午8:09:32
- * TODO
  */
 public class Tag {
 

@@ -5,10 +5,6 @@ import java.util.Date;
 /**
  * 节点板块实体
  * Table: node_tab
- * @author sen
- * 2018年5月5日
- * 下午8:58:27
- * TODO
  */
 public class NodeTab {
 

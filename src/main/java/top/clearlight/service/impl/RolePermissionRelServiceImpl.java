@@ -9,11 +9,6 @@ import top.clearlight.dao.RolePermissionRelDao;
 import top.clearlight.entity.RolePermissionRel;
 import top.clearlight.service.RolePermissionRelService;
 
-/**
- * <p></p>
- * @author: miansen.wang
- * @date: 2019-03-01
- */
 @Service
 public class RolePermissionRelServiceImpl implements RolePermissionRelService {
 

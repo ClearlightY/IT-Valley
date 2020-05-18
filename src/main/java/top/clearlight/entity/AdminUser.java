@@ -3,10 +3,6 @@ package top.clearlight.entity;
 import java.util.Date;
 import java.util.List;
 
-/**
- * @author miansen.wang
- * @date 2019年2月26日 上午11:42:14
- */
 public class AdminUser {
 	
 	private Integer adminUserId;

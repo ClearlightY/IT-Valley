@@ -23,11 +23,6 @@ import top.clearlight.service.AdminUserService;
 import top.clearlight.service.PermissionService;
 import top.clearlight.service.RoleService;
 
-/**
- * <p></p>
- * @author: miansen.wang
- * @date: 2019-03-01
- */
 public class AccountRealm extends AuthorizingRealm {
 
 	private Logger log = LoggerFactory.getLogger(AuthorizingRealm.class);

@@ -4,10 +4,6 @@ import java.util.Date;
 
 /**
  * 收藏实体
- * @author sen
- * 2018年6月29日
- * 下午5:15:14
- * TODO
  */
 public class Collect {
 

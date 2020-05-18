@@ -16,13 +16,6 @@ import top.clearlight.dto.Result;
 import top.clearlight.entity.SystemConfig;
 import top.clearlight.service.SystemConfigService;
 
-/**
- * <p>
- * </p>
- * 
- * @author: miansen.wang
- * @date: 2019-03-11
- */
 @Controller
 @RequestMapping("/admin/system")
 public class SystemConfigAdminController {

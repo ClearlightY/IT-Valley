@@ -2,11 +2,6 @@ package top.clearlight.entity;
 
 import java.io.Serializable;
 
-/**
- * <p></p>
- * @author: miansen.wang
- * @date: 2019-02-28
- */
 public class Customer implements Serializable {
 
 	private static final long serialVersionUID = -1545195873576249731L;

@@ -5,10 +5,6 @@ import top.clearlight.enums.InsertReplyEnum;
 
 /**
  * 存储添加评论的结果
- * @author sen
- * 2018年5月25日
- * 下午8:49:11
- * TODO
  */
 public class ReplyExecution {
 

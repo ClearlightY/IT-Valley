@@ -17,11 +17,6 @@ import top.clearlight.entity.Permission;
 import top.clearlight.service.PermissionService;
 import top.clearlight.service.RolePermissionRelService;
 
-/**
- * <p></p>
- * @author: miansen.wang
- * @date: 2019-03-01
- */
 @Service
 public class PermissionServiceImpl implements PermissionService {
 

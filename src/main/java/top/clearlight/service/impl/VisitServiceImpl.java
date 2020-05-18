@@ -16,10 +16,6 @@ import top.clearlight.exception.OperationRepeaException;
 import top.clearlight.exception.OperationSystemException;
 import top.clearlight.service.VisitService;
 
-/**
- * 
- * @author sen 2018年8月4日 下午3:34:37 TODO
- */
 @Service
 public class VisitServiceImpl implements VisitService {
 

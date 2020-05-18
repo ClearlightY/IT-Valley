@@ -3,10 +3,6 @@ package top.clearlight.entity;
 import java.io.Serializable;
 import java.util.Date;
 
-/**
- * @author miansen.wang
- * @date 2019年2月26日 下午12:47:26
- */
 public class Permission implements Serializable{
 	
 	private static final long serialVersionUID = 6163933397000219988L;

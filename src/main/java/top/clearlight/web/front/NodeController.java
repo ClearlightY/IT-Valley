@@ -23,10 +23,7 @@ import top.clearlight.service.NodeService;
 import top.clearlight.service.NodeTabService;
 import top.clearlight.service.TopicService;
 
-/**
- * @author miansen.wang
- * @date 2018年11月3日 下午3:48:28
- */
+
 @Controller
 public class NodeController {
 	

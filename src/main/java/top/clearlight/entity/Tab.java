@@ -4,10 +4,6 @@ import java.util.Date;
 
 /**
  * 父板块
- * @author sen
- * 2018年7月15日
- * 下午8:53:45
- * TODO
  */
 public class Tab {
 

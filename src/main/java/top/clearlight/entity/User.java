@@ -4,9 +4,6 @@ import java.util.Date;
 
 /**
  * @author sen
- * 2018年5月5日
- * 下午8:46:50
- * 用户实体
  * Table: root_user
  */
 public class User {

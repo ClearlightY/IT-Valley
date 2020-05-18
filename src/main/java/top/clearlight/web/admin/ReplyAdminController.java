@@ -16,11 +16,6 @@ import top.clearlight.dto.Result;
 import top.clearlight.entity.Reply;
 import top.clearlight.service.ReplyService;
 
-/**
- * <p></p>
- * @author: miansen.wang
- * @date: 2019-03-30
- */
 @Controller
 @RequestMapping("/admin/reply")
 public class ReplyAdminController {

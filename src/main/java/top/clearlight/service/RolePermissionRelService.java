@@ -5,11 +5,6 @@ import java.util.Collection;
 import java.util.List;
 import top.clearlight.entity.RolePermissionRel;
 
-/**
- * <p></p>
- * @author: miansen.wang
- * @date: 2019-03-01
- */
 public interface RolePermissionRelService {
 
 	List<RolePermissionRel> getAllByRoleId(Integer roleId);

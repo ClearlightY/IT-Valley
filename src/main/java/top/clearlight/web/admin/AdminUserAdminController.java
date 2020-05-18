@@ -21,13 +21,6 @@ import top.clearlight.exception.ApiAssert;
 import top.clearlight.service.AdminUserService;
 import top.clearlight.service.RoleService;
 
-/**
- * <p>
- * </p>
- * 
- * @author: miansen.wang
- * @date: 2019-03-02
- */
 @Controller
 @RequestMapping("/admin/admin_user")
 public class AdminUserAdminController {

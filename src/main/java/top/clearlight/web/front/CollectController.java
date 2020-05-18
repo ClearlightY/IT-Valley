@@ -19,12 +19,6 @@ import top.clearlight.service.CollectService;
 import top.clearlight.service.NoticeService;
 import top.clearlight.service.TopicService;
 
-/**
- * @author sen
- * 2018年7月3日
- * 上午10:15:28
- * TODO
- */
 @Controller
 public class CollectController extends BaseController{
 

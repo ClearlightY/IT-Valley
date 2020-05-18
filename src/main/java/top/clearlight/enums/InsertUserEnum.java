@@ -2,10 +2,6 @@ package top.clearlight.enums;
 
 /**
  * 注册用户的数据字典
- * @author sen
- * 2018年5月6日
- * 下午9:52:11
- * TODO
  */
 public enum InsertUserEnum {
 

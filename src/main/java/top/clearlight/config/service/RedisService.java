@@ -18,9 +18,6 @@ import redis.clients.jedis.JedisPoolConfig;
  * <p>
  *     Redis 配置与获取
  * </p>
- * 
- * @author: miansen.wang
- * @date: 2019-03-10
  */
 @Component
 public class RedisService implements BaseService<JedisPool> {

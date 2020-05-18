@@ -6,10 +6,6 @@ import java.util.List;
 import org.apache.ibatis.annotations.Param;
 import top.clearlight.entity.AdminUserRoleRel;
 
-/**
- * @author miansen.wang
- * @date 2019年2月28日 上午10:28:26
- */
 public interface AdminUserRoleRelDao {
 
 	/**

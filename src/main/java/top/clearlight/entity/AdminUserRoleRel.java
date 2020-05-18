@@ -3,10 +3,6 @@ package top.clearlight.entity;
 import java.io.Serializable;
 import java.util.Date;
 
-/**
- * @author miansen.wang
- * @date 2019年2月28日 上午10:25:37
- */
 public class AdminUserRoleRel implements Serializable{
 
 	private static final long serialVersionUID = 1L;

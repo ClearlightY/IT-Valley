@@ -14,8 +14,6 @@ import top.clearlight.exception.ApiException;
 
 /**
  * 全局异常处理
- * @author miansen.wang
- * @date 2018年10月31日 下午4:03:45
  */
 @ControllerAdvice
 @Component

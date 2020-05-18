@@ -2,7 +2,6 @@ package top.clearlight.dto;
 
 /**
  * 封装JSON对象，所有的返回结果都使用它
- * TODO
  */
 public class Result<T> {
 

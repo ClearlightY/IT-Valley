@@ -2,10 +2,6 @@ package top.clearlight.enums;
 
 /**
  * 评论的数据字典
- * @author sen
- * 2018年5月25日
- * 下午8:42:36
- * TODO
  */
 public enum InsertReplyEnum {
 

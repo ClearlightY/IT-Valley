@@ -3,10 +3,7 @@ package top.clearlight.entity;
 import java.io.Serializable;
 import java.util.Date;
 
-/**
- * @author miansen.wang
- * @date 2019年2月26日 下午1:22:43
- */
+
 public class RolePermissionRel implements Serializable{
 	
 	private static final long serialVersionUID = -2722110977172451408L;

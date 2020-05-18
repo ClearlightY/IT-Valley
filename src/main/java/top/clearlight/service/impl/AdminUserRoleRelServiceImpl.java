@@ -9,11 +9,6 @@ import top.clearlight.dao.AdminUserRoleRelDao;
 import top.clearlight.entity.AdminUserRoleRel;
 import top.clearlight.service.AdminUserRoleRelService;
 
-/**
- * <p></p>
- * @author: miansen.wang
- * @date: 2019-02-28
- */
 @Service
 public class AdminUserRoleRelServiceImpl implements AdminUserRoleRelService {
 

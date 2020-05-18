@@ -15,8 +15,6 @@ import org.springframework.web.context.request.WebRequest;
  * 前端 From 表单传过来 String 类型的时间数据，如：2019-5-1
  * Controller 类中的接收的是 Date 类型
  * </p>
- * @author: miansen.wang
- * @date: 2019-05-02
  */
 @Component
 public class ConvertDateConfig implements WebBindingInitializer {

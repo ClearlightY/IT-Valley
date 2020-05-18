@@ -4,10 +4,6 @@ import java.util.List;
 import org.apache.ibatis.annotations.Param;
 import top.clearlight.entity.AdminUser;
 
-/**
- * @author miansen.wang
- * @date 2019年2月26日 下午1:24:17
- */
 public interface AdminUserDao {
 	
 	// 根据用户名查询后台用户

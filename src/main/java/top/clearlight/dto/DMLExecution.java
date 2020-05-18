@@ -5,10 +5,6 @@ import top.clearlight.enums.UpdateEnum;
 
 /**
  * 存储增删改操作的结果
- * @author sen
- * 2018年8月4日
- * 下午3:19:48
- * TODO
  */
 public class DMLExecution {
 

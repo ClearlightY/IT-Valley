@@ -23,11 +23,6 @@ import top.clearlight.service.NodeService;
 import top.clearlight.service.ReplyService;
 import top.clearlight.service.TopicService;
 
-/**
- * <p></p>
- * @author: miansen.wang
- * @date: 2019-03-02
- */
 @Controller
 @RequestMapping("/admin/topic")
 public class TopicAdminController {

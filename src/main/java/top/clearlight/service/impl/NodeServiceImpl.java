@@ -11,10 +11,6 @@ import top.clearlight.entity.Node;
 import top.clearlight.service.NodeService;
 import top.clearlight.service.TopicService;
 
-/**
- * @author miansen.wang
- * @date 2018年11月3日 下午2:48:24
- */
 @Service
 public class NodeServiceImpl implements NodeService{
 

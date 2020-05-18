@@ -5,10 +5,6 @@ import java.util.List;
 import org.apache.ibatis.annotations.Param;
 import top.clearlight.entity.Node;
 
-/**
- * @author miansen.wang
- * @date 2018年11月3日 上午11:41:39
- */
 public interface NodeDao {
 
 	/**
