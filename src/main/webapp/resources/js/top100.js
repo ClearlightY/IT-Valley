@@ -14,7 +14,7 @@ $(function(){
 						<th>#</th>\
 						<th>用户名</th>\
 						<th>积分</th>\
-						<th>主题数</th>\
+						<th>文章数</th>\
 						<th>评论数</th>\
 						</tr>\
 						</thead>\

@@ -48,14 +48,23 @@ public class TopicAdminController {
 	@RequiresPermissions("topic:list")
 	@RequestMapping(value = "/list",method = RequestMethod.GET)
 	public String list(String startDate, String endDate,String author, Model model,@RequestParam(defaultValue = "1") Integer p) {
-		if (StringUtils.isEmpty(startDate)) startDate = null;
-	    if (StringUtils.isEmpty(endDate)) endDate = null;
-	    if (StringUtils.isEmpty(author)) author = null;
+		if (StringUtils.isEmpty(startDate)) {
+			startDate = null;
+		}
+	    if (StringUtils.isEmpty(endDate)) {
+			endDate = null;
+		}
+	    if (StringUtils.isEmpty(author)) {
+			author = null;
+		}
+		// 调用业务逻辑层,查询需要搜索的文章
 		PageDataBody<Topic> page = topicService.pageForAdmin(author, startDate, endDate, p, 25);
+	    // 将查询的数据封装到model对象中, 这样前台就可以通过el表达式来展示查询的数据
 		model.addAttribute("page", page);
 	    model.addAttribute("startDate", startDate);
 	    model.addAttribute("endDate", endDate);
 	    model.addAttribute("author", author);
+	    // 将/list返回给分发器, 分发器通过视图解析器对视图层进行解析,跳转到list.jsp界面
 	    return "admin/topic/list";
 	}
 	

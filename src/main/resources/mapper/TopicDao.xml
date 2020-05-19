@@ -72,9 +72,6 @@
 			<if test='tab == "new"'>
 				order by top desc,create_date desc
 			</if>
-<!--			<if test='tab == "lonely"'>-->
-<!--				order by top desc,view_count-->
-<!--			</if>-->
 		</if>
 		<if test="start != null">
             limit #{start,jdbcType=INTEGER}
@@ -520,9 +517,6 @@
         select count(topic_id)
         from topic t
         where t.is_delete = 0
-        <!-- <if test="tab != null">
-        	and t.tab = #{tab,jdbcType=VARCHAR}
-        </if> -->
     </select>
     <!-- 根据节点统计无人评论的话题 -->
     <select id="countTopicNoReplyByNode" resultType="java.lang.Integer">

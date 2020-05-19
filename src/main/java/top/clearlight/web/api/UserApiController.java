@@ -176,6 +176,7 @@ public class UserApiController extends BaseController {
 	 */
 	@RequestMapping(value = "/api/user/top100",method = RequestMethod.GET)
 	private Result<List> top100(@RequestParam(value = "limit",defaultValue = "100")Integer limit){
+		// 查询前100名用户, 封装到List集合中.
 		List<Top100> scores = userService.scores(limit);
 		return new Result<List>(true, scores);
 	}

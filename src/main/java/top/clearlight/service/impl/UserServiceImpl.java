@@ -108,6 +108,7 @@ public class UserServiceImpl implements UserService {
      */
     @Override
     public List<Top100> scores(Integer limit) {
+        // 调用DAO, 查询前100名用户的信息
         return rootUserDao.selectByScore(limit);
     }
 
@@ -176,12 +177,16 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserExecution save(User user) {
         try {
+            // 调用DAO. 执行添加用户的SQL语句
             int insertUser = rootUserDao.insertUser(user);
             if (insertUser <= 0) {
                 throw new OperationFailedException("注册失败");
             } else {
+                // 通过注册用户的用户名,查询刚添加的用户的所有信息,保存用户信息到rootUser中
                 User rootUser = rootUserDao.selectByUserName(user.getUserName());
+                // redis是非关系型数据库, 以键值对形式存储. 向redis中存储用户信息
                 redisService.setString(rootUser.getThirdAccessToken(), JsonUtil.objectToJson(rootUser));
+                // 返回添加用户注册成功的信息
                 return new UserExecution(user.getUserName(), InsertUserEnum.SUCCESS, rootUser);
             }
         } catch (OperationRepeaException e1) {

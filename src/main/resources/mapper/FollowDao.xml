@@ -121,9 +121,12 @@
      </select>
     <!-- 判断是否已关注 0：否 1：是 -->
     <select id="isFollow" resultType="java.lang.Integer">
+        /*统计包括null值的所有符合条件的字段的条数*/
      	select count(1)
      	from follow
+     	/*登录用户ID*/
      	where uid = #{uid}
+     	/*访问页面用户ID*/
      	and fid = #{fid}
      </select>
     <!-- 关注的人的主题的数量 -->

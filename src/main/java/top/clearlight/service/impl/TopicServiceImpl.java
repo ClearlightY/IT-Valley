@@ -58,7 +58,9 @@ public class TopicServiceImpl implements TopicService{
 	 */
 	@Override
 	public PageDataBody<Topic> pageAllByTab(Integer pageNumber, Integer pageSize,String tab) {
+		// 查询当前页所要显示的文章, 封装到list集合中. 开始的索引 : (当前的页码 - 1) * 每页显示的条数
 		List<Topic> list = rootTopicDao.selectAllByTab((pageNumber - 1) * pageSize, pageSize,tab);
+		// 查询文章总数
 		int total = rootTopicDao.countTopicByTab(tab);
 		return new PageDataBody<>(list, pageNumber, pageSize, total);
 	}
@@ -179,15 +181,12 @@ public class TopicServiceImpl implements TopicService{
 			/**
 			 * 根据话题名称、话题作者、话题标签、话题内容查询话题
 			 * 如果上面四个参数已存在于数据库中，则此处会报错
-			 * 2018.06.03 16：35
 			 */
-			// Topic rootTopic = rootTopicDao.selectByNameAndAuthorAndTagAndContent(topic.getTitle(), topic.getAuthor(),  topic.getTag(),topic.getContent());
 			if(insert <= 0) {
 				throw new OperationFailedException("发布话题失败！");
 			}else {
 				//发贴加积分
 				rootUserDao.updateScoreByName(Integer.valueOf(systemConfigService.getByKey("create_topic_score").getValue()), topic.getAuthor());
-				// Topic rootTopic = rootTopicDao.selectByTitleAndDate(topic.getTitle(), topic.getCreateDate());
 				return new TopicExecution(topic.getTitle(), InsertTopicEnum.SUCCESS, topic);
 			}
 		}catch (OperationFailedException e1) {
@@ -203,7 +202,9 @@ public class TopicServiceImpl implements TopicService{
 	
 	@Override
 	public TopicExecution createTopic(String title, String content, String tab, String nodeCode, String nodeTitle, String tag, User user) {
+		// 创建文章对象
 		Topic topic = new Topic();
+		// 将文章的信息保存到文章对象中
 		topic.setPtab(null);
 		topic.setTab(tab);
 		topic.setTitle(title);
@@ -381,8 +382,11 @@ public class TopicServiceImpl implements TopicService{
 	@Override
 	public PageDataBody<Topic> pageForAdmin(String author, String startDate, String endDate, Integer pageNumber,
 			Integer pageSize) {
+		// 调用DAO查询文章,并封装到List集合中, 其中以Topic为泛型
 		List<Topic> list = rootTopicDao.selectAllForAdmin(author, startDate, endDate, (pageNumber - 1) * pageSize, pageSize);
+		// 查找用户在时间段内总的文章数
 		int totalRow = countAllForAdmin(author, startDate, endDate);
+		// 将查询到的文章集合和对应分页的数据封装到PageDataBody对象中, 返回给控制层
 		return new PageDataBody<Topic>(list, pageNumber, pageSize, totalRow);
 	}
 

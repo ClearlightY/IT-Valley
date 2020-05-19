@@ -119,8 +119,10 @@ public class RedisService implements BaseService<JedisPool> {
 	public Jedis getJedis() {
 		try {
 			Jedis jedis = null;
+			// 初始化Jedis连接池
 			jedisPool = instance();
 			if (jedisPool != null) {
+				// 从连接池中获取jedis对象
 				jedis = jedisPool.getResource();
 			}
 			return jedis;
@@ -157,7 +159,9 @@ public class RedisService implements BaseService<JedisPool> {
 		if (StringUtils.isEmpty(key) || StringUtils.isEmpty(value) || jedis == null) {
 			return;
 		}
+		// 存储用户唯一值和用户信息
 		jedis.set(key, value);
+		// 关闭连接, 释放资源
 		jedis.close();
 	}
 

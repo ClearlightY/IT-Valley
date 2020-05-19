@@ -33,22 +33,6 @@
 				</div>
 			</div>
 			<!-- ./col -->
-<%--			<div class="col-lg-3 col-xs-6">
-				<!-- small box -->
-				<div class="small-box bg-green">
-					<div class="inner">
-						<h3>${node_count}</h3>
-
-						<p>今天新增节点数</p>
-					</div>
-					<div class="icon">
-						<i class="ion ion-pricetags"></i>
-					</div>
-					<a href="/admin/node/list" class="small-box-footer">更多 <i
-						class="fa fa-arrow-circle-right"></i></a>
-				</div>
-			</div>--%>
-			<!-- ./col -->
 			<div class="col-lg-3 col-xs-6">
 				<!-- small box -->
 				<div class="small-box bg-yellow">

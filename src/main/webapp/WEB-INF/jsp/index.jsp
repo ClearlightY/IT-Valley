@@ -226,9 +226,6 @@
         }
 
         var p = page(); //当前页数
-        console.log("p:" + p);
-        console.log(count);
-        console.log(url);
         paginate(count, limit, p, url);
 
 

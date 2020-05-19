@@ -49,7 +49,7 @@ public class UserAdminController {
 		model.addAttribute("email", email);
 		model.addAttribute("p", p);
 		model.addAttribute("page", userService.pageForAdmin(username, email, p, 25));
-		return "/admin/user/list";
+		return "/admin//user/list";
 	}
 	
 	/**

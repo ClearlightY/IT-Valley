@@ -124,12 +124,16 @@ public class TopicController extends BaseController {
     @RequestMapping(value = "/topic/save", method = RequestMethod.POST)
     @ResponseBody
     private Result<TopicExecution> save(String title, String content, /*String tab,*/ /*String nodeCode,String nodeTitle*/ String tag, HttpServletRequest request) {
+        // 判断用户是否登录, 游客没有发布文章的权限
         User user = getUser(request);
+        // 若为空则未登录
         ApiAssert.notNull(user, "请先登录");
+        // 判断标题是否为空
         ApiAssert.notNull(title, "标题不能为空");
         if (StringUtils.isEmpty(tag)) {
             tag = null;
         }
+        // 调用业务逻辑层, 执行添加文章的方法, 若添加成功则将成功的标志,和文章的信息返回给ajax.
         TopicExecution saveTopic = rootTopicService.createTopic(title, content, null, null, null, tag, user);
         return new Result<TopicExecution>(true, saveTopic);
     }

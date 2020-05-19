@@ -11,6 +11,7 @@ function isFollow() {
 		type: "get",
 		dataType: "json",
 		data: {
+			// 当前页面用户的ID
 			fid: userId
 		},
 		success: function (data) {
@@ -106,7 +107,7 @@ function save() {
 				}
 				if (data.success != null && data.success == true
 					&& data.error == "取消关注成功") {
-					location.reload();
+					location.reload(); 
 				}
 			},
 			error: function (data) {

@@ -45,7 +45,7 @@ public class FollowController extends BaseController {
     @ResponseBody
     private Result<Integer> isFollow(Integer fid, HttpServletRequest request) {
         User user = getUser(request);
-        if (user == null) return new Result<>(false, "未关注");
+        if (user == null) return new Result<>(false, "用户未登录");
         if (user.getUserId() == fid) {
             return new Result<>(false, "同一用户");
         }
@@ -53,6 +53,7 @@ public class FollowController extends BaseController {
         if (follow == 0) {
             return new Result<>(false, "未关注");
         }
+        // 将 成功的标志和查询的条数 封装到Result数据流对象中 返回给ajax
         return new Result<>(true, follow);
     }
 
@@ -78,6 +79,7 @@ public class FollowController extends BaseController {
         // 添加成功的话,返回成功的标志
         if (insert == 1) {
             String info = "关注成功";
+            // 将 成功的信息和标志返回给ajax
             return new Result<Integer>(true, info);
         }
         return new Result<>(false, "关注失败");

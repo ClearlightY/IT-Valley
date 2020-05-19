@@ -83,6 +83,7 @@ public class IndexController extends BaseController {
 	private String index(HttpServletRequest request, HttpServletResponse response,
 			@RequestParam(value = "p", defaultValue = "1") Integer p,
 			@RequestParam(value = "tab", defaultValue = "all") String tab) {
+		// 通过当前页码,每页显示的数量以及板块名称来查询当前页的文章和文章总数.
 		PageDataBody<Topic> page = topicService.pageAllByTab(p, 25, tab);
 		List<Tab> tabList = tabService.selectAll();
 		List<Node> nodeList = nodeService.findAllByTab(tab, 0, 5);
@@ -107,7 +108,7 @@ public class IndexController extends BaseController {
 		}
 		System.out.println(page.getTotalRow());
 		System.out.println(page.getPageSize());
-
+		// 将 查询的文章,文章总数,当前页码和每页显示的条数 封装到request域中.
 		request.setAttribute("page", page);
 		request.setAttribute("findHot", findHot);
 		request.setAttribute("findTodayNoReply", findTodayNoReply);
@@ -119,6 +120,7 @@ public class IndexController extends BaseController {
 		request.setAttribute("countUserAll", countUserAll);
 		request.setAttribute("countAllTopic", countAllTopic);
 		request.setAttribute("countAllReply", countAllReply);
+		// 控制器通过
 		return "index";
 	}
 
@@ -144,16 +146,18 @@ public class IndexController extends BaseController {
 	private Result<UserExecution> register(@RequestParam("username") String username,
 			@RequestParam("password") String password, @RequestParam("email") String email,
 			HttpServletRequest request) {
+		// 表单验证
 		ApiAssert.notEmpty(username, "请输入用户名");
 		ApiAssert.notEmpty(password, "请输入密码");
 		ApiAssert.notEmpty(email, "请输入邮箱");
-		// 调用业务逻辑层查找用户是否存在
+		// 查找用户名是否已经被注册
 		User user = userService.findByName(username);
+		// 若用户名存在则直接返回注册页面,显示用户名已注册
 		ApiAssert.isNull(user, "用户已存在");
 		// 调用业务逻辑层查找邮箱是否存在
 		user = userService.findByEmail(email);
 		ApiAssert.isNull(user, "邮箱已存在");
-		// 满足所有条件后则创建新的用户,存储到数据库中
+		// 创建新的用户,存储到数据库中
 		UserExecution save = userService.createUser(username, password, email);
 		return new Result<UserExecution>(true, save);
 	}
